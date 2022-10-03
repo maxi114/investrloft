@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/node_modules/flickity-fullscreen/fullscreen.css">
+    <script src="/node_modules/flickity-fullscreen/fullscreen.js"></script>
+    <link rel="stylesheet" href="css/mystartups.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--link for the notification bell icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Investrloft</title>
+</head>
+
+<body>
+    <div class="container1">
+        <!--navigation-->
+        <div class="navhold">
+
+            <div class="nav1">
+
+                <!--website logo-->
+                <div id="logo">
+                    <a href="/"> <img class="logo" src="../logo/white.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!--display  profile-->
+                <div class="divdrop11">
+                    <!--profile picture-->
+                    <div class="logo2">
+                        <img class="prof" src="./profile/profile2.jpg" alt="" srcset="">
+                    </div>
+                </div>
+
+                <!--bell icon-->
+                <h4 style="font-size:24px" class="fa">&#xf0f3;
+                    <span class="badge"></span>
+                </h4>
+
+                <!--div drop down for accounts-->
+                <div class="divdropnav">
+                    <p class="vmail">{{vm.email}}</p>
+                    <hr>
+                    <p class="vcount">Account</p>
+                    <p class="vlogout vcount">Logout</p>
+                </div>
+
+            </div>
+
+            <!--navigation links-->
+            <div class="navlinks">
+                <!--burger icon-->
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <a href="/findinvestors" class="link nav23">Find investors</a>
+                <a href="/mystartups" class="link nav11">My Startups</a>
+                <a href="/savedinvestors" class="link">Saved investors</a>
+                <a href="/messages" class="link nav2">Messages
+                    <span class="badge2"></span>
+                </a>
+                <a href="/post" class="link nav3">Post</a>
+
+            </div>
+
+            <!--div drop for notifiction-->
+            <div class="divdropnotification">
+                <h2 class="notif">Notifications</h2>
+                <hr>
+                <p class="cl">You're Clear!</p>
+            </div>
+
+        </div>
+
+        <!--post your first product-->
+        <div class="pr2">
+            <div class="first-product">
+                <p class="p">Post your startup to start receiving offers.</p>
+                <br><br>
+                <a href="/post" class="btn1">Post your startup</a>
+            </div>
+        </div>
+        <br>
+        <!--show all the products the entrepreneur has posted-->
+        <div class="products">
+        </div>
+        <!--pop up window when entrepreneur desides to delete a product-->
+        <div class="pop-up">
+            <div class="pop-up1">
+                <h1>Are you Sure You Want to delete your startup?</h1>
+                <p>If you choose to delete your startup, all of its information including its
+                    investors will permanently be lost.</p>
+                <button class="yes">YES</button>
+                <button class="no ">NO</button>
+            </div>
+        </div>
+
+        <!--loading screen circle-->
+        <div class="loader"></div>
+
+        <!--Subscribe pop-up-->
+        <!--<div class="subpop">
+            <div class="subpop1">
+                <h1 class="subpopp">Get premium</h1>
+                
+                <p class="subpop2"></p>
+                <p class="subpop3"></p>
+
+                <ul id = "ulll">
+                    <li>Post unlimited startups</li>
+                    <li>Your startup will be visible to investors </li>
+                    <li>Be able to contact investors that interest you</li>
+                </ul>
+
+                <br>
+                <div class="plan">
+                    <p class="p1 p2">Premium</p>
+                    <p class="p1 p3">$25.00</p>
+                    <p class="p1 p4">per month</p>
+                </div>
+                <br><br>
+
+                <a class="blink" href="/billing">Continue</a>
+                <br><br><br>
+            </div>
+        </div>-->
+
+
+        <!--div holding launching pop-up-->
+        <div class="subpop">
+            <div class="subpop1">
+                <h1 class="subpopp">Launching soon</h1>
+                <p class="subpop2">launching soon</p>
+                <p class="subpop3">Welcome to Investrloft, We will email you as soon as we have investors on board. </p>
+              <br><br>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

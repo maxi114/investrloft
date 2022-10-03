@@ -1,0 +1,531 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.container1{
+    text-align: center;
+}
+/*naviation bar*/
+.nav{
+    width: 100vw;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    background-color: #2f2fa2;
+    height: 50px;
+}
+
+/*website logo*/
+#logo{
+    width: 100px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.logo{
+    width: 100%;
+}
+
+/*profile logo*/
+.logo2{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0px;
+    margin-top: 2px;
+    background: #f64c72;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* down arrow */
+.divdrop11{
+    width: max-content;
+    float: right;
+    margin-right: 20px;
+}
+.divdrop11:hover {
+    cursor: pointer;
+}
+
+/*div dropdown*/
+.divdropnav{
+    position: absolute;
+    border: solid 1px white;
+    background-color: white;
+    box-shadow: 0px 2px 10px 1px grey;
+    width: 200px;
+    right: 0;
+    margin-top: 50px;
+    word-wrap: break-word;
+    display: none;
+    z-index: 1;
+}
+
+/*email displayed in the drop down*/
+.vmail{
+    color: grey;
+}
+
+/*account $ logout displayed in the dropdown*/
+.vcount{
+    font-size: 20px;
+    font-weight: normal
+}
+
+.vcount:hover{
+    cursor: pointer;
+}
+
+/*select option*/
+#opt{
+    border: solid 1px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*-----------------startup styling-------------*/
+.nap{
+    margin: 0px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: left;
+    color: #3F3FA0;
+    margin-left: 150px;
+}
+.iii{
+    position: relative;
+    max-width: 2000px;
+    margin: auto;
+    height: 450px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 50px;
+}
+
+
+.innn{
+    width: 99vw;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.ms{
+    position: absolute;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    width: 100%;
+    height: 46px;
+    color: #484848;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+.ms1{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    max-width: 300px;
+    margin: auto;
+    height: 46px;
+    color: #484848;
+}
+.investor2{
+    width: 290px;
+    margin: 10px;
+}
+
+/*-------------------style and position the prodcuts from the databse---------------*/
+.test{
+    position: relative;
+    width: 290px;
+    margin: 10px;
+    background-color: white;
+    border: solid .5px rgb(168, 168, 168);
+    height: 350px;
+}
+.idem{
+    display: none;
+}
+
+/*div holding the entrepreneurs profile*/
+.en{
+    height: 40px;
+    margin: 0px;
+    top: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.en2{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    top: 50%;
+    transform: translate(0%,-50%);
+    border-radius: 50%;
+    background-color: #2f2fa2;
+    text-align: center;
+    font-size: 11px;
+    color: white;
+    line-height: 25px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.en3{
+    position: absolute;
+    left: 0;
+    margin-left: 42px;
+    width: 200px;
+    height: 40px;
+}
+.enpp{
+    margin: 0px;
+    text-align: left;
+    color: #0e0e0f;
+    height: 17px;
+    font-size: 15px;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+.enp{
+    margin-top: 5px;
+}
+.enp2{
+    color: slategrey;
+}
+
+.name{
+     margin: 10px 0px 10px 0px;
+     text-transform: capitalize;
+     font-size: 25px;
+     height: 27px;
+     color: #2f2fa2;
+     cursor: pointer;
+}
+.description{
+    margin: 0px;
+    max-width: 250px;
+    text-align: left;
+    margin: auto;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(67, 73, 78);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: pre-wrap;
+}
+
+.description:hover{
+    color: grey;
+}
+
+/* position dots in carousel */
+.flickity-page-dots {
+    top: 130px;
+  }
+  /* white circles */
+  .flickity-page-dots .dot {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border: 2px solid white;
+    opacity: 1;
+  }
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    background: white;
+  }
+/*products*/
+.products1{
+    max-width: 1500px;
+    margin:auto;
+    margin-top: 50px;
+}
+.products{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 5px;
+}
+.flickity-button{
+    display: none;
+  }
+/*div holding the product images*/
+.img2{
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    height: 150px;
+    cursor: pointer;
+}
+.img2:hover .flickity-button{
+    display: block;
+}
+.img3{
+    margin: 0px;
+    width: 100%;
+    height: 150px;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+/*div holding the offers*/
+.of{
+    margin: 0px;
+    margin-top: 15px;
+    border-top: solid 1px rgb(168, 168, 168)
+}
+.offer2{
+    margin: 0px;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #2f2fa2;
+    margin-top: 5px;
+}
+.svr{
+    margin: 0px;
+    height: 35px;
+    display: inline-block;
+}
+.lc{
+    height: 20px;
+    margin-top: 10px;
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.disapprove{
+    margin-right: 20px;
+    cursor: pointer;
+    border: solid 1px;
+    border-radius: 5px;
+    background-color: #f64c72;
+    color: white;
+    padding: 5px;
+}
+.approve{
+    margin-left: 20px;
+    cursor: pointer;
+    border: solid 1px;
+    border-radius: 5px;
+    background-color: #2f2fa2;
+    color: white;
+    padding: 5px;
+}
+  /*div holding the message pop-up*/
+  .message1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    display: none;
+    z-index: 1;
+}
+
+.message2{
+  position: relative;
+    max-width: 500px;
+    height: max-content;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px;
+    z-index: 1;
+}
+
+.message3{
+    position: relative;
+      width: 300px;
+      height: 60px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 0px;
+      z-index: 1;
+      display: none;
+  }
+  .msgt{
+      line-height: 30px;
+  }
+  /*close button*/
+.iop{
+    border: none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+/*div holdin the profile image and name and type*/
+.profile2{
+    width: 100%;
+    height: 60px;
+    padding: 10px 0px 10px 0px;
+    background-color: whitesmoke;
+    margin: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .imgp{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+  }
+  
+  .imgp2{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-size: 20px;
+    background-color: #2f2fa2;
+  }
+  
+  .namep{
+     font-size: 19px;
+      text-transform: capitalize;
+      color: #0e0e0f;
+      margin: 0px;
+      min-width: 180px;
+      float: left;
+      margin-top: 10px;
+      margin-left: 20px;
+      text-align: left;
+  }
+  .error{
+      color: red;
+      margin: 0px;
+      display: none;
+  }
+
+  .typep{
+    font-size: 19px;
+      text-transform: capitalize;
+      color: grey;
+      margin: 0px;
+      min-width: 180px;
+      float: left;
+      margin-left: 20px;
+      text-align: left;
+  }
+  
+  /*close button*/
+  .close{
+    border: none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+  
+    /*approve2 button*/
+    .approve2{
+        height: 40px;
+        width: 140px;
+        margin-top: 5px;
+        font-size: 15px;
+        color: white;
+        background-color: #2f2fa2;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        outline: none;
+        border-radius: 5px;
+      }
+      .approve2:hover{
+        color: rgb(211, 211, 211);
+      }
+
+        /*approve2 button*/
+    .feature2{
+        height: 40px;
+        width: 140px;
+        margin-top: 5px;
+        font-size: 15px;
+        color: white;
+        background-color: #2f2fa2;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        outline: none;
+        border-radius: 5px;
+      }
+      .feature2:hover{
+        color: rgb(211, 211, 211);
+      }
+ /*unapprove2 button*/
+ .disapprove2{
+    height: 40px;
+    width: 140px;
+    margin-top: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: #03034d;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 5px;
+  }
+  .disapprove2:hover{
+    color: rgb(211, 211, 211);
+  }

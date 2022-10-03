@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--link to social media icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/update.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--link for the notification bell icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Investrloft</title>
+</head>
+
+<body>
+
+
+    <div class="container" id=>
+        <!--navigation-->
+        <div class="navhold">
+
+            <div class="nav1">
+
+                <!--display  profile-->
+                <div class="divdrop11">
+                    <!--profile picture-->
+                    <div class="logo2">
+                        <img class="prof" src="./profile/profile2.jpg" alt="" srcset="">
+                    </div>
+                </div>
+
+                <!--bell icon-->
+                <h4 style="font-size:24px" class="fa">&#xf0f3;
+                    <span class="badge"></span>
+                </h4>
+
+                <!--website logo-->
+                <div id="logo">
+                    <a href="/"> <img class="logo" src="../logo/white.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!--div drop down for accounts-->
+                <div class="divdropnav">
+                    <p class="vmail">{{vm.email}}</p>
+                    <hr>
+                    <p class="vcount">Account</p>
+                    <p class="vlogout vcount">Logout</p>
+                </div>
+
+            </div>
+
+
+
+            <!--navigation links-->
+            <div class="navlinks">
+
+                <!--burger icon-->
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <a href="/findinvestors" class="link nav23">Find investors</a>
+                <a href="/mystartups" class="link nav11">My Startups</a>
+                <a href="/savedinvestors" class="link">Saved investors</a>
+                <a href="/messages" class="link nav2">Messages
+                    <span class="badge2"></span>
+                </a>
+                <a href="/update" class="link nav3">Update</a>
+
+            </div>
+
+            <!--div drop for notifiction-->
+            <div class="divdropnotification">
+                <h2 class="notif">Notifications</h2>
+                <hr>
+                <p class="cl">You're Clear!</p>
+            </div>
+
+        </div>
+
+        <!--container 2-->
+        <div class="container2">
+            <div class="subcontainer">
+                <p class="error">{{vm.error}}</p>
+                <form class="newproduct" autocomplete="on">
+
+                    <h2 id="tit">Update your startup with the latest information</h2>
+
+                    <!--div to show selected images and videos-->
+                    <p class="imgt">upload pictures of your startup</p>
+                    <div class="images">
+                        <input type="file" id="file" multiple accept='image/*' required>
+                        <label for="file">upload here...................</label>
+
+                        <p class="imgt" id="imgt">youtube video or any video online? post it in the link below.</p>
+
+                        <div class="iver">
+                            <i class="fa fa-circle-o-notch fa-spin" id="spin"></i>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <p class="imgt">Youtube video link</p>
+                    <!--div to store the youtube links-->
+                    <div class="ytlink"></div>
+                    <p class = "yterror">{{vm.yterror}}</p>
+                    <input type="url" id="vidlink" placeholder="youtube video link">
+                    <br><br>
+                    <button class="ytbtn">Add video link</button>
+                    <br>
+
+                    <p class="imgt">Name of your startup</p>
+
+                    <input type="name" name="name" id="productname" placeholder="Name" ng-model='vm.product.name'
+                        required>
+                    <p>companys name must be at least 1 character and cannot exceed 40 characters</p>
+                    <br><br><br>
+
+                    <div class="team">
+                        <label for="team1" class="imgt">How many employees are on your team:</label>
+
+                        <select name="team1" class="empnum" id="productname">
+                            <option value="#" select># Employees</option>
+                            <option value="Just me for now">Just me for now</option>
+                            <option value="2-5">2-5</option>
+                            <option value="6-10">6-10</option>
+                            <option value="11-25">11-25</option>
+                            <option value="26-50">26-50</option>
+                            <option value="51-75">51-75</option>
+                            <option value="76-100">76-100</option>
+                            <option value="101-150">101-150</option>
+                            <option value="151-200">151-200</option>
+                            <option value="201+">201+</option>
+                        </select>
+                    </div>
+                    <br><br>
+
+                    <p class="imgt">How much capital have you raised in $USD if any? (optional)</p>
+                    <input type="number" class="cp" id="productname" ng-model='vm.product.money2'
+                        placeholder="funds raised in USD if any">
+
+                    <br><br>
+                    <p class="imgt">Your startup website url (optional)</p>
+                    <input type="url" class="wb" id="productname" ng-model='vm.product.website'
+                        placeholder="Startup website url if any">
+
+                    <br><br>
+                    <p class="imgt">describe what your startup does</p>
+                    <textarea name="description" rows="10" cols="40" id="description" ng-model='vm.product.description'
+                        class="description1" required>
+                        </textarea>
+                    <p>Description must be at least 200 characters and 600 characters at most</p>
+                    <br><br><br><br><br>
+                    <div>
+                        I am asking for $
+                        <input name="money" type="number" placeholder="100,000" ng-model='vm.product.money'
+                            class="mmoney" id="text" required>
+                        <p>no space allowed, make sure it is in the correct format and put commas where needed eg
+                            (1,000,000)</p>
+                        for
+                        <input name="offer" type="text" placeholder="0%" ng-model='vm.product.offer' class="offeer"
+                            id="text">
+                        <p>no spaces or decimals allowed and cannot exceed 100% eg(10%)</p>
+                        of my startup
+
+                    </div>
+
+                    <br><br><br>
+                    <p class="imgt"> How will the invested money be utilized? </p>
+                    <textarea id="description" ng-model="vm.product.description2" name="description2" cols="40"
+                        class="description2" rows="10"></textarea>
+                    <p>Explanations must be at least 100 characters and 600 characters at most</p>
+                    <br><br>
+
+                    <!--Industry-->
+                    <p class="imgt">Under what industry would you classify your startup in? (optional)</p>
+
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn"></button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#" class="spin12"><i class="fa fa-circle-o-notch fa-spin" id="spin2"></i></a>
+                        </div>
+                    </div>
+
+                    <p class="error">{{vm.error2}}</p>
+                    <br><br><br>
+                    <!--<button ng-click='vm.save()' class="btn1">save</button>-->
+                    <button type="submit" ng-click='vm.update()' class="btn1" value='post'>
+                        <p class="postbtn">Update</p><i class="fa fa-circle-o-notch fa-spin" id="spin3"></i>
+                    </button>
+                    <br><br>
+                    <!--<button ng-click='vm.delete()' class="btn1 delete">delete</button>-->
+                </form>
+
+            </div>
+        </div>
+
+        <!--loading screen circle-->
+        <div class="loader"></div>
+
+        <!--footer-->
+        <footer class="intro5">
+
+            <p class="ft1">Email: contact@investrloft.com</p>
+            <a class="ft1" href="/termsofservice">Terms of service</a>
+
+            <br><br>
+            <!--social media-->
+            <!--facebook link-->
+               <!-- <a class = "icon" href="https://www.facebook.com/Angaliza-667918643642556/?modal=composer&notify_field=blurb&ref=your_pages">
+                    <i class="fab fa-facebook-f"></i>
+                </a>-->
+                <!--instagram link-->
+                <!--<a class = "icon icon2" href="https://www.instagram.com/angaliza._/">
+                    <i class="fab fa-instagram">
+                    </i>
+                </a>-->
+                <!--twitter link-->
+                <!--<a class = "icon" href="https://twitter.com/Angaliza1">
+                    <i class="fab fa-twitter"></i>
+                </a>-->
+                
+                <p class = "ft1" >© 2020</p>
+        </footer>
+
+        <script src="js/post.js"></script>
+    </div>
+
+</body>
+
+</html>

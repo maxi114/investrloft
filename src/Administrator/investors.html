@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/investor.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--div holding the whole page-->
+    <div class="container1">
+
+        <!--div holding the navigation-->
+        <div class="nav">
+
+            <!--logo-->
+            <div id="logo">
+                <a href="/"> <img class="logo" src="../logo/white.png" alt="Logo">
+                </a>
+            </div>
+
+            <!--profile-->
+            <div class="divdrop11">
+                <!--profile picture-->
+                <div class="logo2">
+                    <img class="prof" src="./profile/profile2.jpg" alt="" srcset="">
+                </div>
+            </div>
+
+            <!--div drop down for accounts-->
+            <div class="divdropnav">
+                <p class="vmail">{{vm.email}}</p>
+                <hr>
+                <p class="vcount">Account</p>
+                <p class="vlogout vcount">Logout</p>
+            </div>
+
+
+            <select name="" id="opt">
+                <option class="invst" value="Investors">Investors</option>
+                <option class="start" value="Startups">Startups</option>
+                <option class="invds" value="Industries">Industries</option>
+            </select>
+
+        </div>
+        <br><br><br>
+        <!--div for investors that need approvement-->
+        <div class="approvement iii">
+
+            <h1 class="nap">Need approvement</h1>
+            <!--div holding the investors-->
+            <div class="investor innn"></div>
+
+            <p class="ms app"></p>
+
+        </div>
+
+        <!--div for featured investors-->
+        <div class="featured iii">
+
+            <h1 class="nap">Homepage feature</h1>
+            <!--div holding investors-->
+            <div class="home2 innn">
+            </div>
+
+            <p class="ms ft"></p>
+
+        </div>
+
+        <!--div for approved investors-->
+        <div class="homepage iii">
+
+            <h1 class="nap">Approved investors</h1>
+            <!--div holding investors-->
+            <div class="home1 innn"></div>
+
+            <p class="ms ail"></p>
+
+        </div>
+
+        <!--div holding message pop-up-->
+        <div class="message1">
+            <div class="message2">
+                <!--div holding the profile been messaged to-->
+                <div class="profile2">
+                    <input type="hidden" class="inid">
+                    <input type="hidden" class="enid">
+
+                    <!--div holding the image-->
+                    <div class="imgp">
+                        <div class="imgp2"></div>
+                    </div>
+
+                    <!--div holding the name and type-->
+                    <div class="np">
+
+                        <!--p holding the name-->
+                        <p class="namep"></p>
+
+                        <!--p holding the location-->
+                        <p class="typep fa fa-map-marker"> </p>
+                    </div>
+
+
+                    <button class="close">X</button>
+                </div>
+
+
+                <!--div holding the text box-->
+                <div class="text">
+                    <!--text area-->
+                    <p class="ms1"></p>
+                    <!--div to paste links to-->
+                    <div class="link23"></div>
+                    <p class="error">You can't send an empty message.</p>
+                    <!--approve/unapprove button-->
+                </div>
+
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+</body>
+
+</html>

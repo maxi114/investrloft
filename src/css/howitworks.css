@@ -1,0 +1,37 @@
+body{
+    background-color: whitesmoke;
+}
+.container{
+    text-align: center;
+    font-size: 20px;
+}
+/*logo*/
+.logo{
+    width: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h2{
+    text-align: center;
+    border: solid 1px lawngreen;
+    max-width: 50px;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.img1{
+    position: relative;
+    margin: 0px;
+    max-width: 1500px;
+    margin: auto;
+    height: max-content;
+}
+.img{
+    margin: 0px;
+    width: 100%
+}
+  
+

@@ -1,0 +1,554 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container1{
+    text-align: center;
+}
+/*naviation bar*/
+.nav{
+    width: 100vw;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    background-color: #2f2fa2;
+    height: 50px;
+}
+
+/*website logo*/
+#logo{
+    width: 100px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.logo{
+    width: 100%;
+}
+
+/*profile logo*/
+.logo2{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0px;
+    margin-top: 2px;
+    background: #f64c72;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* down arrow */
+.divdrop11{
+    width: max-content;
+    float: right;
+    margin-right: 20px;
+}
+.divdrop11:hover {
+    cursor: pointer;
+}
+
+/*div dropdown*/
+.divdropnav{
+    position: absolute;
+    border: solid 1px white;
+    background-color: white;
+    box-shadow: 0px 2px 10px 1px grey;
+    width: 200px;
+    right: 0;
+    margin-top: 50px;
+    word-wrap: break-word;
+    display: none;
+    z-index: 1;
+}
+
+/*email displayed in the drop down*/
+.vmail{
+    color: grey;
+}
+
+/*account $ logout displayed in the dropdown*/
+.vcount{
+    font-size: 20px;
+    font-weight: normal
+}
+
+.vcount:hover{
+    cursor: pointer;
+}
+
+/*select option*/
+#opt{
+    border: solid 1px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nap{
+    margin: 0px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: left;
+    color: #3F3FA0;
+    margin-left: 150px;
+}
+/*-----------------investors styling-------------*/
+.iii{
+    position: relative;
+    max-width: 2000px;
+    margin: auto;
+    height: 370px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 50px;
+}
+
+
+.innn{
+    width: 99vw;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.ms{
+    position: absolute;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    width: 100%;
+    height: 46px;
+    color: #484848;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+.ms1{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    max-width: 300px;
+    margin: auto;
+    height: 46px;
+    color: #484848;
+}
+.investor2{
+    width: 290px;
+    margin: 10px;
+}
+
+/*investor profile*/
+.profile{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0px;
+    margin-top: 20px;
+    background: white;
+    color: black;
+    text-align: center;
+    line-height: 80px;
+    text-transform: uppercase;
+    font-size: 30px;
+    float: left;
+    border: solid 1px #2f2fa2;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*investors first and last name*/
+.nl{
+    background-color: #2f2fa2;
+    height: 55px;
+    margin-top: 50px;
+    color: white;
+    border-top-left-radius: 15px;
+    cursor: pointer;
+}
+.name{
+    width: 188px;
+    margin-left: 100px;
+    height: 20px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    padding-top: 5px;
+    margin-left: 100px;
+    overflow: hidden;
+}
+.firstName{
+    text-transform: capitalize;
+    margin: 0px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.lastName{
+    text-transform: capitalize;
+    margin: 0px;
+    font-size: 18px;
+    padding: 0px;
+}
+.loc{
+    text-align: left;
+    float: right;
+    margin: 0px;
+    margin-top: 33px;
+    width: 190px;
+}
+
+#location{
+    font-size: 15px;
+}
+
+.bio{
+    background-color: white;
+    border-top: solid 1px #2f2fa2;
+}
+
+.bio2{
+    height: 90px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: pointer;
+    white-space: pre-wrap;
+}
+.bio2::-webkit-scrollbar {
+    width: 12px;
+}
+
+.bio2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+.bio2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+/*approve button*/
+.approve{
+    max-width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background-color: #f64c72;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+/*unapprove button*/
+.unapprove{
+    max-width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background-color: #f80f41;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.bdgt{
+    color: #2fa25f;
+}
+.rating{
+    padding-left: 20px;
+    height: 24px;
+}
+.rating2{
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    padding-right: 2px;
+}
+.star{
+    cursor: pointer;
+}
+.checked {
+    color: orange;
+  }
+.feature{
+    color: #3564aa;
+    cursor: pointer;
+    margin:0px;
+    padding: 0px;
+    width: max-content;
+    float: right;
+    margin-right: 20px;
+  }
+
+  .unfeature{
+    color: #3564aa;
+    cursor: pointer;
+    margin:0px;
+    padding: 0px;
+    width: max-content;
+    float: right;
+    margin-right: 20px;
+  }
+.feature:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.inv1{
+    position: relative;
+    margin-top: 140px;
+    height: 60vh;
+}
+
+.inv{
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.p{
+    font-size: 17px;
+    letter-spacing: 0;
+    font-weight: 400;
+    line-height: 1.43;
+    margin: 0px;
+}
+.btn1{
+    border: none;
+    font-size: 15px;
+    padding: 13px 40px 13px 40px;
+    color: white;
+    background-color: #2f2fa2;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+  /*div holding the message pop-up*/
+  .message1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    display: none;
+    z-index: 1;
+}
+
+.message2{
+  position: relative;
+    max-width: 500px;
+    height: max-content;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px;
+    z-index: 1;
+}
+
+.message3{
+    position: relative;
+      width: 300px;
+      height: 60px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 0px;
+      z-index: 1;
+      display: none;
+  }
+  .msgt{
+      line-height: 30px;
+  }
+  /*close button*/
+.iop{
+    border: none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+/*div holdin the profile image and name and type*/
+.profile2{
+    width: 100%;
+    height: 60px;
+    padding: 10px 0px 10px 0px;
+    background-color: whitesmoke;
+    margin: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .imgp{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+  }
+  
+  .imgp2{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-size: 20px;
+    background-color: #2f2fa2;
+  }
+  
+  .namep{
+     font-size: 19px;
+      text-transform: capitalize;
+      color: #0e0e0f;
+      margin: 0px;
+      min-width: 180px;
+      float: left;
+      margin-top: 10px;
+      margin-left: 20px;
+      text-align: left;
+  }
+  .error{
+      color: red;
+      margin: 0px;
+      display: none;
+  }
+
+  .typep{
+    font-size: 19px;
+      text-transform: capitalize;
+      color: grey;
+      margin: 0px;
+      min-width: 180px;
+      float: left;
+      margin-left: 20px;
+      text-align: left;
+  }
+  
+  /*close button*/
+  .close{
+    border: none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+  
+    /*approve2 button*/
+    .approve2{
+        height: 40px;
+        width: 140px;
+        margin-top: 5px;
+        font-size: 15px;
+        color: white;
+        background-color: #2f2fa2;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        outline: none;
+        border-radius: 5px;
+      }
+      .approve2:hover{
+        color: rgb(211, 211, 211);
+      }
+
+        /*approve2 button*/
+    .feature2{
+        height: 40px;
+        width: 140px;
+        margin-top: 5px;
+        font-size: 15px;
+        color: white;
+        background-color: #2f2fa2;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        outline: none;
+        border-radius: 5px;
+      }
+      .feature2:hover{
+        color: rgb(211, 211, 211);
+      }
+ /*unapprove2 button*/
+ .unapprove2{
+    height: 40px;
+    width: 140px;
+    margin-top: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: #03034d;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 5px;
+  }
+  .unapprove2:hover{
+    color: rgb(211, 211, 211);
+  }
+
+   /*unapprove2 button*/
+ .unfeature2{
+    height: 40px;
+    width: 140px;
+    margin-top: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: #03034d;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 5px;
+  }
+  .unfeature2:hover{
+    color: rgb(211, 211, 211);
+  }

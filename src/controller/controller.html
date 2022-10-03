@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <title>InvestrLoft</title>
+    <link href="../logo/Capture.PNG" rel="shortcut icon" type="image/x-icon" />
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/jquery-collapse/src/jquery.collapse.js"></script>
+    <script src="/node_modules/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js"></script>
+    <script src="/node_modules/angular-jwt/dist/angular-jwt.js"></script>
+    <script src="controller.js"></script>
+    <script src="investor-cntr.js"></script>
+    <script src ="startup-cntr.js"></script>
+    <script src="admin-cntr.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <link rel="stylesheet" href="/StripeElements.css">
+</head>
+<body>
+    <div class="container" ng-View></div>
+   
+</body>
+</html>

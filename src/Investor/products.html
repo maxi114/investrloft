@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--link to social media icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--link for the bell icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEosJpwPi93NGAXxn0y3mHBZHEkFr9zd4&libraries=places&callback=initialize"></script>
+    <link rel="stylesheet" href="/node_modules/flickity/dist/flickity.min.css">
+    <script src="/node_modules/flickity/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="css/products.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angaliza</title>
+</head>
+
+<body>
+
+    <div class="container1">
+
+        <!--navigation-->
+        <div class="navhold">
+
+            <div class="nav1">
+
+                <!--website logo-->
+                <div id="logo">
+                    <a href="/"> <img class="logo" src="../logo/white.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!--display  profile-->
+                <div class="divdrop11">
+                    <!--profile picture-->
+                    <div class="logo2">
+                        <img class="prof" src="./profile/profile2.jpg" alt="" srcset="">
+                    </div>
+                </div>
+
+                <!--serch box-->
+                <!--<div class="search">
+                    <input type="search" name="search" placeholder="Search Startups.." class="searching">
+                    <input type="submit" class="searchin2" value="Go">
+                </div>-->
+
+                <!--bell icon-->
+                <h4 style="font-size:24px" class="fa bell">&#xf0f3;
+                    <span class="badge"></span>
+                </h4>
+
+                <!--div drop down for accounts-->
+                <div class="divdropnav">
+                    <p class="vmail">{{vm.email}}</p>
+                    <hr>
+                    <p class="vcount">Account</p>
+                    <p class="vlogout vcount">Logout</p>
+                </div>
+
+                <!--div drop for notifiction-->
+                <div class="divdropnotification">
+                    <h2 class="notif">Notifications</h2>
+                    <hr>
+                    <p class="cl">You're Clear!</p>
+                </div>
+
+            </div>
+
+            <!--navigation links-->
+            <div class="navlinks">
+                <!--burger icon-->
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                <a href="/products" class="link nav23">Find startups</a>
+                <a href="/savedstartups" class="link nav11">Saved startups</a>
+                <a href="/requested" class="link nav2">Requested</a>
+                <a href="/investormessages" class="link nav3">Messages
+                    <span class="badge2"></span>
+                </a>
+
+                <!--navigation filter-->
+                <div class="navfilter">
+
+                    <div class="fil12">
+
+                        <!--find investors intrested in-->
+                        <div class="fil1 fill">
+
+                            <h4 class="infil1">Industry</h4>
+                            <label id="ijf2" class="ijf2" ng-model="vm.indus">Any<i class="fa fa-angle-down"
+                                    id="arrow"></i></label>
+
+                            <div class="infil2" name="" id="in1">
+                                <p class="any">Any</p>
+                            </div>
+
+                        </div>
+
+                        <!--location-->
+                        <div class="fil2 fil1">
+                            <h4 class='infil1'>Within</h4>
+                            <select class='infil2' name="" id="in2">
+                                <option class="in3" value="any">Any Distance</option>
+                                <option value="5">5 miles</option>
+                                <option value="10">10 miles</option>
+                                <option value="25">25 miles</option>
+                                <option value="50">50 miles</option>
+                                <option value="100">100 miles</option>
+                            </select>
+                        </div>
+
+                        <!--asking price-->
+                        <form class="fil1" id="fil3">
+                            <h4 class='infil1 fi'>Investment</h4>
+                            <input type="number" name="" placeholder="Minimum" class="price min">
+                            <input type="number" name="" placeholder="Maximum" class="price max">
+                            <input type="submit" value="click" class="submit12" style="display: none;">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--show all startups-->
+        <!--<div class="first-product">
+            <p class="product">No Startups yet</p>
+        </div>-->
+
+        <!--loading screen circle-->
+        <div class="loader"></div>
+
+        <!--display products-->
+        <!--<div class="products1">
+            <div class="products">
+            </div>
+        </div>-->
+
+        <!--message-->
+        <div class="me">
+            <div class="me2">
+                <p class="me3">I can't find startups matching your search right now.</p>
+                <button class="me4">clear filters</button>
+            </div>
+        </div>
+        <!--display preview-->
+        <div class="pop-preview">
+            <div class="preview1">
+
+            </div>
+        </div>
+
+        <!--pop up-->
+        <div class="more">
+            <div class="more1">
+                <div class="close">+</div>
+                <h1 class="head">Request sent</h1>
+                <P>A notification will be sent to the entrepreneur and you will be notified through email when the
+                    entrepreneur accepts your offer"</P>
+                <br><br>
+                <button class="close1">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!--flickity-->
+    <script src="./js/products.js"></script>
+
+    <!--div holding the countdown to laucnh-->
+    <div class="launch2">
+        <div class="launch">
+
+            <h2><!--<span>Countdown to lauch</span>-->Launching soon</h2>
+            <!--<div class="countdown">
+                <div id="day">NA</div>
+                <div id="hour">NA</div>
+                <div id="minute">NA</div>
+                <div id="second">NA</div>
+            </div>-->
+
+
+        </div>
+    </div>
+    <script src="./js/investors.js"></script>
+
+</body>
+
+</html>

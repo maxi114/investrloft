@@ -1,0 +1,795 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: whitesmoke;
+}
+
+.subpop{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    display: none;
+    z-index: 1;
+}
+.subpopp{
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    color: rgb(66, 65, 65);
+    margin: 10px;
+    background-color: #2f2fa2;
+    color: white;
+    width: 100%;
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.subpop1{
+    background-color: white;
+    width: 300px;
+    border-radius: 5px;
+}
+.subpop2{
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 25px;
+    color: rgb(66, 65, 65);
+    margin-bottom: 5px;
+}
+.subpop3{
+    height: fit-content;
+    opacity: 1;
+    color: rgb(107, 106, 106);
+    margin: 0px;
+    max-width: 200px;
+    margin: auto;
+
+}
+.blink{
+    text-decoration: none;
+    outline: none;
+    padding: 10px 15px 10px 15px;
+    font-size: 19px;
+    border-radius: 5px;
+    color: white;
+    background-color: #2f2fa2;
+    cursor: pointer;
+}
+.plan{
+    border: solid 2px #2f2fa2;
+    border-radius: 5px;
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+}
+.p1{
+    margin: 10px;
+}
+.p2{
+    color: #676767;
+    font-size: 19px;
+}
+.p3{
+    font-size: 25px;
+    color: #2f2fa2;
+}
+.p4{
+    color: #676767;
+    font-size: 19px;
+}
+  /*div holding the message pop-up*/
+  .message1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    display: none;
+    z-index: 1;
+}
+
+.message2{
+  position: relative;
+    max-width: 500px;
+    height: max-content;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px;
+    z-index: 1;
+}
+
+.message3{
+    position: relative;
+      width: 300px;
+      height: 60px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 0px;
+      z-index: 1;
+      display: none;
+  }
+  .msgt{
+      line-height: 30px;
+  }
+  /*close button*/
+.iop{
+    border: none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+/*div holdin the profile image and name and type*/
+.profile2{
+    width: 100%;
+    height: 60px;
+    padding: 10px 0px 10px 0px;
+    background-color: whitesmoke;
+    margin: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .imgp{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+  }
+  
+  .imgp2{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-size: 20px;
+    background-color: #2f2fa2;
+  }
+  
+  .namep{
+     font-size: 19px;
+      text-transform: capitalize;
+      color: #0e0e0f;
+      margin: 0px;
+      min-width: 180px;
+      float: left;
+      margin-top: 10px;
+      margin-left: 20px;
+      text-align: left;
+  }
+  .error{
+      color: red;
+      margin: 0px;
+      display: none;
+  }
+
+  .typep{
+    font-size: 19px;
+      text-transform: capitalize;
+      color: grey;
+      margin: 0px;
+      min-width: 180px;
+      float: left;
+      margin-left: 20px;
+      text-align: left;
+  }
+  
+  /*close button*/
+  .close{
+    border: none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .insert{
+      position: absolute;
+      right: 70px;
+      top: 21px;
+      outline: none;
+      cursor: pointer;
+  }
+  .insert1{
+      position: absolute;
+      top: 50px;
+      border: solid 1px;
+      right: 70px;
+      width: 150px;
+      background-color: white;
+      display: none;
+      height: 150px;
+      overflow: auto;
+  }
+
+  .pk{
+      padding: 10px 0px 10px 0px;
+      margin: 0px;
+      background-color: whitesmoke;
+  }
+  
+  .pk1{
+      text-transform: capitalize;
+      cursor: pointer;
+      margin: 0px;
+      padding: 5px 0px 5px 0px;
+  }
+  .pk1:hover{
+      color: grey;
+  }
+  .link23{
+      background-color: white;
+      height: max-content;
+      width: 380px;
+      padding: 5px 0px 5px 0px;
+      margin: auto;
+      display: none;
+  }
+  .stp{
+      margin-right: 7px;
+      text-transform: capitalize;
+  }
+  /*div holding the text*/
+  .text{
+    width: 100%;
+    min-height: 150px;
+    background-color: whitesmoke;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  /*text area*/
+  #txt{
+    width: 90%;
+    height: 70px;
+    padding: 10px;
+    background-color: white;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    margin-bottom: 0px;
+  }
+  
+  /*send button*/
+  .send{
+    height: 40px;
+    width: 140px;
+    margin-top: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: #2f2fa2;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    outline: none;
+  }
+  .send:hover{
+    color: rgb(211, 211, 211);
+  }
+/* center the text on the page on the center*/
+.container1{
+    position: relative;
+text-align: center;
+display: block;
+overflow: auto;
+height: 100vh;
+}
+
+/*--------stying and positioning the navigation bar-------------*/
+
+/*navigation div 1*/
+.navhold{
+    width: 100vw;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+}
+.nav1{
+    background-color: #2f2fa2;
+    height: 50px;
+}
+
+/*website logo*/
+#logo{
+    width: 100px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.logo{
+    width: 100%;
+}
+
+/*profile logo*/
+.logo2{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0px;
+    margin-top: 2px;
+    background: #f64c72;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    text-transform: uppercase;
+
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* down arrow */
+.divdrop11{
+    width: max-content;
+    float: right;
+    margin-right: 20px;
+}
+.divdrop11:hover {
+    cursor: pointer;
+}
+
+/*h4 bell notification*/
+.ta{
+    margin: 0px;
+    float: right;
+    margin-right: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+}
+.fa .badge {
+    position: absolute;
+    top: -5px;
+    right: -1px;
+    padding: 6px 6px;
+    border-radius: 50%;
+    background: orange;
+    color: white;
+    display: none
+  }
+/*div dropdown*/
+.divdropnav{
+    position: absolute;
+    border: solid 1px white;
+    background-color: white;
+    box-shadow: 0px 2px 10px 1px grey;
+    width: 200px;
+    right: 0;
+    margin-top: 50px;
+    word-wrap: break-word;
+    display: none;
+}
+
+/*email displayed in the drop down*/
+.vmail{
+    color: grey;
+}
+
+/*account $ logout displayed in the dropdown*/
+.vcount{
+    font-size: 20px;
+    font-weight: normal
+}
+
+.vcount:hover{
+    cursor: pointer;
+}
+
+/* navigation links*/
+.navlinks{
+    box-shadow: 0px 2px 10px 1px grey;
+    height: 30px;
+    background-color: white;
+}
+
+.link{
+    text-decoration: none;
+    line-height: 1.25;
+    width: 20px;
+    color: black;
+    margin: 40px;
+    font-size: 17px;
+}
+.nav2{
+    position: relative;
+}
+.badge2{
+    position: absolute;
+    top: -1px;
+    right: -4px;
+    padding: 6px 6px;
+    border-radius: 50%;
+    background: #f64c72;
+    color: white;
+    display: none;
+}
+.link:hover{
+    color: grey;
+}
+.nav3{
+    margin-right: 0px;
+}
+.nav22{
+    border-bottom: solid 2px #2f2fa2;
+}
+
+/*drop down for notifications*/
+.divdropnotification{
+    position: absolute;
+    text-align: center;
+    border: solid 1px white;
+    background-color: white;
+    box-shadow: 0px 2px 10px 1px grey;
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+    display: none;
+    z-index: 1;
+}
+.notif{
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    color: rgb(66, 65, 65);
+}
+
+.burger{
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.burger div{
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+}
+.line{
+    margin-top: 0px;
+}
+
+/*loading circle on the screen*/
+.loader {
+    border: 5px solid grey; /* Light grey */
+    border-top: 5px solid #2f2fa2; /* Blue */
+    border-left: 5px solid #2f2fa2;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/*investors styling*/
+.investors{
+    position: relative;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 120px;
+}
+
+
+.investor{
+    width: 99vw;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.investor2{
+    width: 290px;
+    margin: 10px;
+}
+
+/*investor profile*/
+.profile{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0px;
+    margin-top: 20px;
+    background: white;
+    color: black;
+    text-align: center;
+    line-height: 80px;
+    text-transform: uppercase;
+    font-size: 30px;
+    float: left;
+    border: solid 1px #2f2fa2;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+/*investors first and last name*/
+.nl{
+    background-color: #2f2fa2;
+    height: 55px;
+    margin-top: 50px;
+    color: white;
+    border-top-left-radius: 15px;
+    cursor: pointer;
+}
+.name{
+    width: 188px;
+    margin-left: 100px;
+    height: 20px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    padding-top: 5px;
+    margin-left: 100px;
+    overflow: hidden;
+}
+.firstName{
+    text-transform: capitalize;
+    margin: 0px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.lastName{
+    text-transform: capitalize;
+    margin: 0px;
+    font-size: 18px;
+    padding: 0px;
+}
+.loc{
+    text-align: left;
+    float: right;
+    margin: 0px;
+    margin-top: 33px;
+    width: 190px;
+}
+
+#location{
+    font-size: 15px;
+}
+
+.bio{
+    background-color: white;
+    border-top: solid 1px #2f2fa2;
+}
+
+.bio2{
+    height: 90px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: pointer;
+    white-space: pre-wrap;
+}
+.bio2::-webkit-scrollbar {
+    width: 12px;
+}
+
+.bio2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+.bio2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+/*contact button*/
+.contact{
+    max-width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background-color: #f64c72;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.bdgt{
+    color: #2fa25f;
+}
+.rating{
+    padding-left: 5px;
+    height: 24px;
+}
+.rating2{
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    padding-right: 2px;
+}
+.star{
+    cursor: pointer;
+}
+.checked {
+    color: orange;
+  }
+.unsave{
+    color: #3564aa;
+    cursor: pointer;
+    margin:0px;
+    padding: 0px;
+    width: max-content;
+    float: right;
+    margin-right: 5px;
+  }
+.unsave:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.inv1{
+    position: relative;
+    margin-top: 140px;
+    height: 60vh;
+}
+
+.inv{
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.p{
+    font-size: 17px;
+    letter-spacing: 0;
+    font-weight: 400;
+    line-height: 1.43;
+    margin: 0px;
+}
+.btn1{
+    border: none;
+    font-size: 15px;
+    padding: 13px 40px 13px 40px;
+    color: white;
+    background-color: #2f2fa2;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/*navigation bar on small screens*/
+@media screen and (max-width: 830px){
+    /*navigation bar*/
+    .nav1{
+        position: relative;
+        text-align: center;
+    }
+    
+    /*website logo*/
+    #logo{
+        margin: 0;
+        margin-top: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /*profile logo*/
+    .divdrop11{
+        float: left;
+        margin-left: 20px;
+    }
+    /*hide the name*/
+    .divdrop1{
+        display: none;
+    }
+    /*bellicon*/
+    .ta{
+        margin-right: 20px;
+    }
+    /*div  dropdown*/
+    .divdropnav{
+        margin-right: 0px;
+        width: 100vw;
+    }
+    /*navigation links*/
+    .navlinks{
+        height: max-content;
+        transition: .5s;
+    }
+    .link{
+        display: none;
+        width: 100%;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+        padding: 20px 0px 20px 0px;
+        font-size: 23px;
+        margin: 0px;
+    }
+
+    .badge2{
+        right: 20px;
+        top: 20px;
+        margin: 0px;
+        padding: 6px 6px;
+        border-radius: 50%;
+        background: #f64c72;
+        color: white;
+        display: none;
+        z-index: 1;
+    }
+
+    .nav22{
+        color: white;
+        background-color: rgb(47, 47, 162,.7);
+        border: none;
+    }
+
+    .nav23{
+        padding-top: 0px;
+    }
+    
+    /*display the burger icon*/
+    .burger{
+        display: block;
+        max-width: 40px;
+        margin: auto;
+    }
+    .burger :first-child{
+        margin-top: 0px;
+    }
+
+    .nav-active{
+        display: inline-block
+    }
+}
+/*navigation bar*/
+@media screen  and (min-width: 831px) and (max-width:999px){
+    .link{
+        margin: 20px;
+        width: max-content;
+    }
+    .nav3{
+        margin-right: 0px;
+    }
+ }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/flickity/dist/flickity.min.css">
+    <script src="/node_modules/flickity/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="./css/savedstartups.css">
+    <!--link for the bell icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!--navigation-->
+    <div class="navhold">
+
+        <div class="nav1">
+
+            <!--website logo-->
+            <div id="logo">
+                <a href="/"> <img class="logo" src="../logo/white.png" alt="Logo">
+                </a>
+            </div>
+
+            <!--display  profile-->
+            <div class="divdrop11">
+                <!--profile picture-->
+                <div class="logo2">
+                    <img class="prof" src="./profile/profile2.jpg" alt="" srcset="">
+                </div>
+            </div>
+
+            <!--bell icon-->
+            <h4 style="font-size:24px" class="fa">&#xf0f3;
+                <span class="badge"></span>
+            </h4>
+
+            <!--div drop down for accounts-->
+            <div class="divdropnav">
+                <p class="vmail">{{vm.email}}</p>
+                <hr>
+                <p class="vcount">Account</p>
+                <p class="vlogout vcount">Logout</p>
+            </div>
+
+        </div>
+
+        <!--navigation links-->
+        <div class="navlinks">
+            <!--burger icon-->
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <a href="/products" class="link nav23">Find startups</a>
+            <a href="/savedstartups" class="link nav11">Saved startups</a>
+            <a href="/requested" class="link nav2">Requested</a>
+            <a href="/investormessages" class="link nav3">Messages
+                <span class="badge2"></span>
+            </a>
+
+        </div>
+
+        <!--div drop for notifiction-->
+        <div class="divdropnotification">
+            <h2 class="notif">Notifications</h2>
+            <hr>
+            <p class="cl">You're Clear!</p>
+        </div>
+
+    </div>
+
+    <!--loading screen circle-->
+    <div class="loader"></div>
+
+    <!--if there arent any requested startups-->
+    <div class="inv1">
+        <div class="inv">
+            <p class="p">Save startups that interest you by clicking on the grey heart on the bottom left of the
+                startup.</p>
+            <br><br>
+            <a class="btn1" href="/products">Find startups</a>
+        </div>
+    </div>
+
+    <!--display products-->
+    <div class="products1">
+        <div class="products">
+        </div>
+    </div>
+
+</body>
+
+</html>

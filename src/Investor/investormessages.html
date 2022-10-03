@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/investormessages.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angaliza</title>
+    <!--link for the bell icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container1">
+
+        <!--navigation-->
+        <div class="navhold">
+
+            <div class="nav1">
+
+                <!--website logo-->
+                <div id="logo">
+                    <a href="/"> <img class="logo" src="../logo/white.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!--display  profile-->
+                <div class="divdrop11">
+                    <!--profile picture-->
+                    <div class="logo2">
+                        <img class="prof" src="./profile/profile2.jpg" alt="" srcset="">
+                    </div>
+                </div>
+
+                <!--bell icon-->
+                <h4 style="font-size:24px" class=" ta fa">&#xf0f3;
+                    <span class="badge"></span>
+                </h4>
+
+                <!--div drop down for accounts-->
+                <div class="divdropnav">
+                    <p class="vmail">{{vm.email}}</p>
+                    <hr>
+                    <p class="vcount">Account</p>
+                    <p class="vlogout vcount">Logout</p>
+                </div>
+
+            </div>
+
+            <!--navigation links-->
+            <div class="navlinks">
+                <!--burger icon-->
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                <a href="/products" class="link nav23">Find startups</a>
+                <a href="/savedstartups" class="link nav11">Saved startups</a>
+                <a href="/requested" class="link nav2">Requested</a>
+                <a href="/investormessages" class="link nav3">Messages</a>
+
+            </div>
+
+            <!--div drop for notifiction-->
+            <div class="divdropnotification">
+                <h2 class="notif">Notifications</h2>
+                <hr>
+                <p class="cl">You're Clear!</p>
+            </div>
+
+        </div>
+
+        <!--div holding the messages-->
+        <div class="hold">
+            <div class="people">
+                <h1 class="mt">Messages</h1>
+                <br>
+               <!-- <select name="" id="">
+                    <option value="all">All Messages</option>
+                    <option value="offers">Accepted Requests Only</option>
+                </select>
+                <br>-->
+                <!--to hold the people-->
+                <div class="people1">
+                </div>
+            </div>
+
+            <div class="messages">
+
+                <div class="message1">
+                    <h1 class="mt2">WELCOME TO MESSAGES</h1>
+                    <P class="p">when a startup accepts your request, you will see it here.</P>
+                    <br>
+                    <a href="/products" class="btn1">Find startups</a>
+                </div>
+
+                <div class="loader"></div>
+                <a href="#" class="previous round">&#8249;</a>
+                <div class="header33">
+
+                </div>
+                <!--div holding the messages-->
+                <div class="message2">
+                    <!--header-->
+
+
+                    <!--message itself-->
+                    <div class="message3"></div>
+
+                </div>
+
+                <!--write a message-->
+                <div class="write2">
+                    <textarea class="write" placeholder="Type message here!"></textarea>
+                    <button class="send">Send <i class=" iofa fa fa-send-o"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

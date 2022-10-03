@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/email.css">
+    <script src="./js/email.js"></script>
+    <title>Investrloft</title>
+</head>
+<body>
+   <!--div to hold the page-->
+   <div class="container1">
+
+        <!--logo-->
+        <div id="logo">
+            <a href="/"> <img class="logo" src="logo/favicon.ico" alt="Logo">
+            </a>
+        </div>
+      
+        <!--div to hold the email input-->
+        <div class="inp">
+            <h2>Type in your email</h2>
+            <br><br>
+            <p class = "message">{{vm.message}}</p>
+            <p class = "error">{{vm.error}}</p>
+            <input id = "email" name = "email" type="email" ng-model = "vm.user.email" placeholder="EMAIL">
+            <p>Email must be a valid address, e.g. me@mydomain.com</p>
+            <br><br>
+            <button class = "btn" ng-click = "vm.reset()">Reset Password</button>
+        </div>
+   </div>
+</body>
+</html>

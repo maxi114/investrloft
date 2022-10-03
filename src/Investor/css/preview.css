@@ -1,0 +1,1039 @@
+body{
+  background-color: whitesmoke;
+  margin: 0px;
+  padding: 0px;
+}
+
+.emppp{
+  margin: 0px;
+  color: rgb(156, 156, 156);
+  font-size: 20px;
+  text-decoration: none;
+  outline: none;
+}
+.emp{
+  padding: 10px;
+  max-width: 350px;
+}
+.emp1{
+  display: none;
+  color: white;
+  font-size: 20px;
+}
+.emp2{
+  display: none;
+  color: white;
+  font-size: 20px;
+}
+.emp3{
+  display: none;
+  color: white;
+  font-size: 20px;
+}
+.subpop{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  display: none;
+  z-index: 1;
+}
+.subpopp{
+  font-weight: normal;
+  line-height: 1.25;
+  font-family: "sans-serif";
+  font-size: 30px;
+  color: rgb(66, 65, 65);
+  margin: 10px;
+  background-color: #2f2fa2;
+  color: white;
+  width: 100%;
+  margin: 0px;
+  padding: 10px 0px 10px 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.subpop1{
+  text-align: center;
+  background-color: white;
+  width: 300px;
+  border-radius: 5px;
+}
+.subpop2{
+  font-weight: normal;
+  line-height: 1.25;
+  font-family: "sans-serif";
+  font-size: 25px;
+  color: rgb(66, 65, 65);
+  margin-bottom: 5px;
+}
+.subpop3{
+  height: fit-content;
+  opacity: 1;
+  color: rgb(107, 106, 106);
+  margin: 0px;
+  max-width: 200px;
+  margin: auto;
+
+}
+.blink{
+  text-decoration: none;
+  outline: none;
+  padding: 10px 15px 10px 15px;
+  font-size: 19px;
+  border-radius: 5px;
+  color: white;
+  background-color: #2f2fa2;
+  cursor: pointer;
+}
+.plan{
+  border: solid 2px #2f2fa2;
+  border-radius: 5px;
+  max-width: 200px;
+  margin: auto;
+  text-align: center;
+}
+.p1{
+  margin: 10px;
+}
+.p2{
+  color: #676767;
+  font-size: 19px;
+}
+.p3{
+  font-size: 25px;
+  color: #2f2fa2;
+}
+.p4{
+  color: #676767;
+  font-size: 19px;
+}
+button{
+  outline: none;
+}
+.loader {
+    border: 5px solid white; /* Light grey */
+    border-top: 5px solid #2f2fa2; /* Blue */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+    transform: translate(-50%,-50%);
+  }
+  .loader2 {
+    border: 5px solid white; /* Light grey */
+    border-top: 5px solid #2f2fa2; /* Blue */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+    transform: translate(-50%,-50%);
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .nostp{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .nostp p{
+    color: red;
+    font-size: 20px;
+  }
+  /*div holding the top of the page*/
+  .container2{
+    width: 100vw;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(47, 47, 162,0.2);
+  }
+
+  /*div holding the location*/
+  .lc{
+    float: left;
+    width: 46%;
+    margin: 0px;
+    text-align: right;
+    margin-top: 13px;
+  }
+
+  #location{
+    margin: 0px;
+    font-size: 20px;
+  }
+  /*div holding the request and save button*/
+  .btns{
+    width: 50%;
+    float: right;
+    text-align: left;
+    margin: 0px;
+    height: 44px;
+    margin-top: 5px;
+  }
+
+  /*request button*/
+  .request{
+    border: solid 1px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    border: solid 1px #b5b6ba;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  /*withdraw button*/
+  .withdraw{
+    border: solid 1px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    border: solid 1px #b5b6ba;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  /*save button*/
+  .save{
+    border: solid 1px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    border: solid 1px #b5b6ba;
+    cursor: pointer;
+  }
+
+   /*unsave button*/
+   .unsave{
+    border: solid 1px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    border: solid 1px #b5b6ba;
+    cursor: pointer;
+  }
+
+  /*when user hovers over the request and save button*/
+  .btns1:hover{
+    color: grey;
+  }
+  
+  /*conatiner 1 on the left*/
+  .container1{
+      max-width: 900px;
+      margin: auto;
+      margin-top: 70px;
+      height: max-content;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0,0.2);
+      background-color: white;
+  }
+
+/*startup name*/
+  .title{
+    text-transform: capitalize;
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    color: #2f2fa2;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+  }
+
+  /*div holding startup images*/
+  .imgs{
+    width: 100%; /* full width */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .imgs1{
+    margin: 0px 50px 0px 50px ;
+    height: 400px;
+  }
+  .imgs1.is-fullscreen .imgs {
+    height: 100%;
+  }
+  
+  .imgs1.is-fullscreen{
+    margin: 0px;
+  }
+
+  .imgs .img3 {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  /* position dots in carousel */
+.flickity-page-dots {
+    bottom: 0px;
+  }
+  /* white circles */
+  .flickity-page-dots .dot {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border: 2px solid white;
+    opacity: 1;
+  }
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    background: white;
+  }
+  /*div holding the video links*/
+  .vidlink{
+    margin: 0px;
+    max-width: 600px;
+    margin: auto;
+    height: max-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #2f2fa2;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+  .vt{
+    color: white;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 0px;
+  }
+  .yplink{
+    margin: 10px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .vvv{
+    margin: 0px;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    outline: none;
+    padding: 5px;
+    text-decoration: none;
+  }
+  .pen1{
+    margin: 0px;
+    width: 90%;
+    height: max-content;
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+  .pen{
+    display: inline-block;
+    padding: 5px;
+    font-size: 18px;
+    max-width: max-content;
+    border-radius: 5px;
+    color: #797a7c;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+  .pen3{
+    color: green;
+  }
+
+  .pen4{
+    color: red;;
+  }
+
+  /*style intrested investors on entrepreneur side*/
+  .pen21{
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    height: 170px;
+    overflow-y: auto;
+    margin-bottom: 0px;
+    display: none;
+  }
+  .pen2{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .in{
+    position: relative;
+    padding: 10px;
+    display: inline-block;
+    width: max-content;
+    background-color: whitesmoke;
+    max-height: 140px;
+    margin-top: 13px;
+  }
+  .inv2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    background-color: #2f2fa2;
+    color: white;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .inv3{
+    position: absolute;
+    width: max-content;
+    top: 18px;
+    left: 70px;
+  }
+  .dy{
+    margin: 0px;
+    text-align: left;
+    color: #0e0e0f;
+    font-size: 15px;
+    text-transform: capitalize;
+  }
+  .iop1{
+    margin: 0px;
+    text-align: left;
+    color: slategrey;
+    font-size: 15px;
+    text-transform: capitalize;
+  }
+  
+  .iop2{
+    margin: 0px;
+    text-align: center;
+    margin: 10px;
+    color: slategrey;
+  }
+
+  .ioppp{
+    color: green;
+  }
+
+  .iiop{
+    color: red;
+  }
+  .bttnns{
+    text-align: center;
+  }
+  .acpt{
+    color: green;
+    border: solid 1px green;
+    outline: none;
+    cursor: pointer;
+    padding: 7px;
+    font-size: 18px;
+    background-color:transparent;
+    width: 80px;
+    margin-right: 5px;
+  }
+  
+  .rjct{
+    color: red;
+    border: solid 1px red;
+    outline: none;
+    cursor: pointer;
+    padding: 7px;
+    font-size: 18px;
+    background-color: transparent;
+    width: 80px;
+    margin-left: 5px;
+  }
+  .unrjct{
+    color: red;
+    border: solid 1px red;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: transparent;
+    width: 100px;
+  }
+  /*div holding the first description*/
+  .descript1{
+      width: 90%;
+      height: max-content;
+      margin-top: 20px;
+      margin-left: 50px;
+  }
+
+  .wedo{
+      width: 100%;
+      height: max-content;
+      margin-top: 40px;
+      font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    color: rgb(66, 65, 65);
+  }
+
+  .des{
+    max-width: 90%;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 20px;
+    color: rgb(107, 106, 106);
+    border: none;
+    white-space: pre-wrap;
+  }
+  /*div holding the second description*/
+  .description2{
+      width: 90%;
+      height: max-content;
+      margin-left: 50px;
+      margin-top: 50px;
+  }
+
+  .wedo2{
+    width: 100%;
+      height: max-content;
+      font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    color: rgb(66, 65, 65);
+    margin: 0px;
+  }
+
+  .descri{
+    max-width: 90%;
+    margin-top: 20px;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 20px;
+    color: rgb(107, 106, 106);
+    white-space: pre-wrap;
+  }
+  /*div holding the startup owner*/
+  .owner{
+      width: 90%;
+      margin-left: 50px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0,0.2);
+      margin-top: 70px;
+  }
+  .owner2{
+    height: 60px;
+    padding: 5px 0px 5px 5px;
+    cursor: pointer;
+  }
+
+  .pr{
+    margin: 0px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #2f2fa2;
+    color: white;
+    font-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    float: left;
+  }
+
+  /*div holding the owners name and what if he is the ceo or other*/
+  .name{
+    max-width: 300px;
+    margin: 0px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .name1{
+    font-size: 19px;
+    text-transform: capitalize;
+    color: #0e0e0f;
+    margin: 0px;
+  }
+
+  .type{
+    font-size: 19px;
+    text-transform: capitalize;
+    color: grey;
+    margin: 0px;
+  }
+
+  /*div holding the bio*/
+  .bio{
+    background-color: whitesmoke;
+    padding: 10px;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 18px;
+    white-space: pre-wrap;
+  }
+
+  /*div holding the price*/
+  .price{
+    margin: 0px;
+    width: 90%;
+      height: max-content;
+      margin-top: 30px;
+      margin-left: 50px;
+  }
+
+  .offer{
+    font-size: 20px;
+    color: #2f2fa2;
+    font-weight: normal;
+    line-height: 1.25;
+    text-transform: capitalize;
+  }
+  /*div holding the industry*/
+  .ind{
+    width: 90%;
+      height: max-content;
+      margin-top: 30px;
+      margin-left: 50px;
+  }
+
+  .ind2{
+    width: 100%;
+    height: max-content;
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    color: rgb(66, 65, 65);
+    margin: 0px;
+  }
+
+  .ind3{
+    display: inline-block;
+    width: max-content;
+    margin-top: 20px;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 18px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 5px;
+    text-transform: capitalize;
+  }
+
+  /*div holding the message pop-up*/
+  .message{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    display: none;
+    z-index: 1;
+}
+
+.message2{
+  position: relative;
+    max-width: 500px;
+    height: max-content;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px;
+    z-index: 1;
+}
+
+.message3{
+  position: relative;
+    max-width: 500px;
+    height: max-content;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px;
+    z-index: 1;
+    display: none;
+}
+
+.withdraw2{
+  position: relative;
+    max-width: 500px;
+    height: max-content;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px;
+    z-index: 1;
+    text-align: center;
+    display: none;
+}
+
+.msgt{
+  width: 100%;
+  height: max-content;
+  font-weight: normal;
+line-height: 1.25;
+font-family: "sans-serif";
+font-size: 30px;
+color: rgb(66, 65, 65);
+margin: 0px;
+text-align: center;
+padding-top: 15px;
+}
+.msgp{
+  font-weight: normal;
+    line-height: 1.25;
+    font-size: 20px;
+    color: rgb(107, 106, 106);
+    padding: 10px;
+}
+
+.msgw{
+  font-weight: normal;
+    line-height: 1.25;
+    font-size: 20px;
+    color: rgb(107, 106, 106);
+    padding: 10px;
+}
+
+.wbtn{
+  border: solid 1px;
+  padding: 5px;
+  font-size: 17px;
+  margin: 10px;
+  width: 70px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+.yes{
+  color: red;
+}
+
+.no{
+  color: green;
+}
+/*div holdin the profile image and name and type*/
+.profile{
+  width: 100%;
+  height: 60px;
+  padding: 10px 0px 10px 0px;
+  background-color: whitesmoke;
+  margin: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.imgp{
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.imgp2{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #2f2fa2;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  line-height: 60px;
+  background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.namep{
+   font-size: 19px;
+    text-transform: capitalize;
+    color: #0e0e0f;
+    margin: 0px;
+    min-width: 200px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.typep{
+  font-size: 19px;
+    text-transform: capitalize;
+    color: grey;
+    margin: 0px;
+    min-width: 200px;
+    float: left;
+    margin-left: 5px;
+}
+
+/*close button*/
+.close{
+  border: none;
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+/*close button*/
+.iop{
+  border: none;
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+/*div holding the text*/
+.text{
+  width: 100%;
+  height: 150px;
+  background-color: whitesmoke;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/*text area*/
+#txt{
+  width: 90%;
+  height: 70px;
+  padding: 10px;
+  background-color: white;
+  font-weight: normal;
+  line-height: 1.25;
+  font-size: 15px;
+  outline: none;
+  border: none;
+}
+
+/*send button*/
+.send{
+  height: 40px;
+  width: 140px;
+  margin-top: 5px;
+  font-size: 15px;
+  color: white;
+  background-color: #2f2fa2;
+  border: none;
+  cursor: pointer;
+}
+.send:hover{
+  color: rgb(211, 211, 211);
+}
+ /*div holding the accept investor pop-up*/
+ .accept1{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  display: none;
+  z-index: 1;
+}
+
+.accept2{
+position: relative;
+  max-width: 500px;
+  height: max-content;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.aptp{
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  color: white;
+  background-color: #2f2fa2;
+  background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.acptp{
+  position: absolute;
+    width: max-content;
+    top: 18px;
+    left: 70px;
+}
+.readd{
+  width: 100%;
+  text-align: center;
+}
+.ysbtn{
+  color: green;
+  background-color: white;
+  border: solid 1px green;
+  cursor: pointer;
+  width: 50px;
+  margin-right: 5px;
+}
+.nbtn{
+  color: red;
+  background-color: white;
+  border: solid 1px red;
+  cursor: pointer;
+  width: 50px;
+  margin-left: 5px;
+}
+.aop{
+  text-align: center;
+  color: green;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.aopp2{
+  text-align: center;
+  color: red;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.aop2{
+  font-weight: normal;
+    line-height: 1.25;
+    font-size: 20px;
+    color: rgb(107, 106, 106);
+}
+.ok{
+  color: green;
+  background-color: white;
+  border: solid 1px green;
+  cursor: pointer;
+  width: 50px;
+  margin-right: 5px;
+}
+  /*top part of screen on small screens*/
+  @media screen and (max-width: 500px){
+   
+    .container2{
+      height: 100px;
+    }
+
+    .imgs1{
+      height: 300px;
+      margin: 0px 5px 0px 5px ;
+    }
+    .container1{
+      margin-top: 120px;
+    }
+    .request{
+      margin-left: 20px;
+    }
+    .save{
+      position: absolute;
+      margin-top: 50px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .unsave{
+      position: absolute;
+      margin-top: 50px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .descript1{
+      margin-left: 5px;
+      margin-right: 5px;
+      max-width: 500px;
+      margin: auto;
+    }
+    .wedo{
+      font-size: 23px;
+    }
+    .des{
+      max-width: 500px;
+    }
+    .description2{
+      margin-left: 5px;
+      margin-right: 5px;
+      max-width: 500px;
+      margin: auto;
+      margin-top: 60px;
+    }
+    .wedo2{
+      font-size: 23px;
+    }
+    .descri{
+      max-width: 500px;
+    }
+
+    .price{
+      margin: 0px;
+      margin-left: 5px;
+      margin-right: 5px;
+      max-width: 500px;
+      margin: auto;
+      margin-top: 60px;
+    }
+
+    .ind{
+      margin-left: 5px;
+      margin-right: 5px;
+      max-width: 500px;
+      margin: auto;
+      margin-top: 60px;
+    }
+  }
+
+  

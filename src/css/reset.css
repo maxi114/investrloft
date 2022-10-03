@@ -1,0 +1,71 @@
+/*center the text on the page*/
+.container{
+    text-align: center;
+}
+body{
+    background-color: whitesmoke;
+}
+
+/*logo*/
+.logo{
+    margin-top: 20px;
+    width: 180px;
+}
+
+/*style the password input box*/
+#password{
+    font-size: 20px;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+}
+
+/*style the button*/
+.btn{
+    font-size: 20px;
+    padding: 15px;
+    outline: none;
+    border-radius: 5px;
+    background-color: black;
+    border: none;
+    color: white;
+}
+.btn:hover{
+    cursor: pointer;
+    color: #3f3fa0;
+}
+
+.inp{
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px 0px 20px 0px;
+}
+/*validation style*/
+.valid{
+    color:  lawngreen;
+}
+.invalid{
+    color: orange;
+}
+input+p{
+    font-family: arial;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 10px;
+    color: orange;
+    opacity: 0;
+    height: 0;
+}
+input.invalid+P{
+    opacity: 1;
+    height: auto;
+    margin-bottom: 10px;
+}
+.error{
+    color: red;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Investrloft</title>
+    <link rel="stylesheet" href="./css/profile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEosJpwPi93NGAXxn0y3mHBZHEkFr9zd4&libraries=places&callback=initialize"></script>
+</head>
+
+<body>
+
+    <script>
+        var searchInput = 'search_input';
+
+        function initialize() {
+            var autocomplete;
+            autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+                types: ['geocode'],
+            });
+
+            google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                var near_place = autocomplete.getPlace();
+
+                //loop through the address componenets
+                for (var i = 0; i < near_place.address_components.length; i++) {
+
+                    //if the type is state
+                    if (near_place.address_components[i].types[0] == "administrative_area_level_1") {
+                        document.getElementById('state').value = near_place.address_components[i].short_name;
+                    }
+
+                    //if the type is country
+                    if (near_place.address_components[i].types[0] == "country") {
+                        document.getElementById('country').value = near_place.address_components[i].short_name;
+                    }
+                }
+                document.getElementById('loc_lat').value = near_place.geometry.location.lat();
+                document.getElementById('loc_long').value = near_place.geometry.location.lng();
+                document.getElementById('city').value = near_place.vicinity;
+
+            });
+        }
+        $(document).on('change', '#' + searchInput, function () {
+            document.getElementById('latitude_input').value = '';
+            document.getElementById('longitude_input').value = '';
+
+            document.getElementById('latitude_view').innerHTML = '';
+            document.getElementById('longitude_view').innerHTML = '';
+        });
+
+
+    </script>
+
+    <div class="container">
+        <!--logo-->
+        <a href="/">
+            <img class="logo" src="./logo/blue.png" alt="logo">
+        </a>
+
+        <div class="container2">
+
+            <!--navigation-->
+            <div class="navigation">
+                <a class="plink link" href="/profile">Profile</a>
+                <a class="Blink link" href="/billing">Billing</a>
+            </div>
+
+            <p class="note">CLICK ON GREY TEXT FOR EDITING</p>
+            <p class="error">{{vm.error}}</p>
+            <!--profile-->
+            <div class="profile">
+                <!--edit profile button-->
+                <button class="save-profile ed" ng-click="vm.save()">Save Profile</button>
+
+                <!--profile picture-->
+                <div class="divprof ed">
+                </div>
+
+                <div class="upload-btn-wrapper">
+                    <button class="btn">Upload profile image</button>
+                    <input type="file" id="file" name="myfile" accept='image/*' />
+                </div>
+
+                <!--email-->
+                <p class="email txt">{{vm.email}}</p>
+                <!--membersince-->
+                <p class="member txt ed">Member since {{vm.rgt}} </p>
+
+                <!--name of the user-->
+                <input type="text" name="customname" placeholder="Type first name.." class="txt edit fname naa"
+                    autocomplete="off" required />
+                <br>
+                <input type="text" name="customname" placeholder="Type last name.." class="txt edit lname naa"
+                    autocomplete="off" required />
+                <br><br>
+                <!--div for the bio-->
+                <div class="divbio ">
+                    <p class="txt biog">Biography</p>
+                    <textarea  class='txt lc edit' id="bio" placeholder="Type bio.." required cols="35" rows="10"></textarea>
+                </div>
+
+                <!--div for the location-->
+                <div class="divloc">
+                    <p class="txt head" id="f"></p>
+
+                    <input type="text " name="customname" placeholder="Type location.." class="edit txt form-control"
+                        id="search_input" autocomplete="off" required />
+
+                </div>
+                <input type="hidden" id="loc_lat" />
+                <input type="hidden" id="loc_long" />
+                <input type="hidden" id="city" />
+                <input type="hidden" id="state" />
+                <input type="hidden" id="country" />
+
+                <!--div for holding investors intrests-->
+                <div class="intrests">
+                    <p class ="txt" id = "t">Industries intrested in</p>
+                    <div class="intr1">
+                    </div>
+                    <div class="intr2"></div>
+                </div>
+                <br><br>
+            </div>
+
+            <br>
+            <!--remove account-->
+            <div class="remove">
+                <button class="dele">Delete Account</button>
+                <div class="remove1">
+                    <h1 class="deac">Delete account</h1>
+                    <br>
+                    <p class="pem">This will permanently delete your account</p>
+                </div>
+
+            </div>
+            <!--pop-up bar for deleting accounts-->
+            <div class="pop-up">
+                <div class="pop-up1">
+                    <p>You will be logged out of your account in order to update your profile</p>
+                    <button class="yes">Update</button>
+                    <button class="no">Dont update</button>
+                    <br>
+                </div>
+            </div>
+
+            <!--second pop-up for districts deleting their account-->
+            <div class="pop-dis">
+                <div class="pop-dis1">
+                    <h1>Are you sure?</h1>
+                    <p>Are you sure you want to delete your account? This action can not be undone and you might lose potential
+                        investments. </p>
+
+                    <button class="yes2">YES</button>
+                    <button class="no2">NO</button>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

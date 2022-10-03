@@ -1,0 +1,43 @@
+/*resize and center the logo*/
+.container1 {
+    max-width: 960px;
+    margin: auto;
+}
+
+h3 {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 47px;
+}
+p{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #484848;
+}
+
+/*terms of service header*/
+
+h1 {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    color: #3F3FA0;
+}
+
+#logo {
+    margin: 0px;
+    width: 176px;
+    line-height: 49px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    color: #3f3fa0;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/whoami.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Investrloft</title>
+</head>
+
+<body>
+    <div class="container1">
+        <!--company logo-->
+        <div id="logo">
+            <a href="/"> <img class="logo1" src="./logo/white.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="subcontainer">
+            <p class = "tx">I am a (an)</p>
+            <!--form that takes the input if you're an entrepreneur or investor-->
+            <form class="form">
+                 <button placeholder = 'account' ng-model="vm.account.startup" ng-init="vm.account.startup = 'startup'" ng-click ="vm.startup()" class="submit startup">Startup owner</button>
+                 <button placeholder = 'account' ng-model = "vm.user.inve" ng-init="vm.user.inve = 'investor'" ng-click='vm.inve()'class="submit inve">Investor</button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

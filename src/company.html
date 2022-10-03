@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/company.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--div holding the whole page-->
+    <div class="container1">
+
+        <!--contact us form-->
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+
+            <button class="close">X</button>
+            <div class="txtb">
+                <label for="">Name :</label>
+                <input type="text" ng-model="vm.contact.name" placeholder="Enter Your Name">
+            </div>
+
+            <div class="txtb">
+                <label for="">Email :</label>
+                <input type="Email" ng-model="vm.contact.email" placeholder="Enter Your Email">
+            </div>
+
+            <div class="txtb">
+                <label for="">Message :</label>
+                <textarea name="" id="" ng-model="vm.contact.message" cols="30" rows="10"></textarea>
+            </div>
+
+            <p class="error">{{vm.error}}</p>
+
+            <div class="btn">
+                <button class="btn1">Send </button>
+                <i class="fa fa-circle-o-notch fa-spin" id="spin3"></i>
+            </div>
+        </div>
+
+        <!--div holding the first section-->
+        <div class="section1">
+
+            <!--div holding the navigation bar-->
+            <nav class="nav">
+
+                <!--logo-->
+                <h1 class="logo">Investrloft</h1>
+
+                <!--div holding home contatc us and terms of service links-->
+                <div class="links1">
+                    <a class="linkk nv nvl2" href="/termsofservice">Terms of Service</a>
+
+                </div>
+
+                <!--div holding the login link and signup button-->
+                <div class="links2">
+
+                    <!--login link-->
+                    <a class="linkk nv2 nv21" href="/login">Login</a>
+
+                    <!--sign up button-->
+                    <a class="signup nv2" href="/whoami"> SIGN UP FREE</a>
+
+                </div>
+
+                <!--burger icon-->
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+            </nav>
+
+
+            <h1 class="title">Connecting college startups with investors.</h1>
+
+            <p class="li">The chances of a startup excelling under an angel
+                investor are high because the investor has the experience and knowledge to know if an idea is a success
+                or failure.
+
+                <img class="leftt" src="./images/left-quote 1.png" alt="" srcset="">
+                <img class="rightt" src="./images/left-quote 2.png" alt="" srcset="">
+                <br><br>
+                <span class="li2">_Ahmed Alzalabani</span>
+            </p>
+
+        </div>
+
+        <!--div holding the second section-->
+        <div class="section2">
+
+            <div class="ttim">
+                <img class="lc" src="./images/Group.png" alt="" srcset="">
+                <img class="rc" src="./images/Group.png" alt="" srcset="">
+                <p class="time">Your time is better used in building your business. It’s estimated that it can take up
+                    to
+                    three months of full-time work to receive funding as an experienced entrepreneur. </p>
+
+
+            </div>
+
+            <div class="sct22">
+                <h3 class="title2">Mission</h3>
+                <br><br><br>
+                <p class="li3">Investrlofts mission it to make the process of finding an angel investor as painless as
+                    possible. we give college startups open access to our investors network while also matching them with
+                    investors
+                    within their industries, thus allowing them to spend more time building their business and less
+                    time
+                    worrying about funding.</p>
+
+                    <div class="rmp">
+
+                         <!--up right image-->
+                    <img class="upcirc" src="./images/Ellipse 10.png" alt="" srcset="">
+                    <img class="uplin" src="./images/Vector.png" alt="" srcset="">
+                    </div>
+            </div>
+        </div>
+
+        
+        <br><br><br>
+
+        <!--div holding the footer of the page-->
+        <div class="footer" id="footer">
+
+            <ul>
+                <li> <a href="/company">Company</a> </li>
+                <!--<li class="fli"> <a href="/support">Support</a> </li>-->
+                <!--<li class="fli2"> <a href="/partnership">Partnership</a> </li>-->
+                <li><a href="/termsofservice">Terms of service</a></li>
+            </ul>
+
+            <p class="fp"> Email: support@investrloft.com</p>
+            <br>
+            <p class="fp">© 2021</p>
+            <br>
+        </div>
+        <script src="./js/home.js"></script>
+    </div>
+</body>
+
+</html>

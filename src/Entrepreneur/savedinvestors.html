@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="css/savedinvestors.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--link for the notification bell icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Investrloft</title>
+</head>
+
+<body>
+    <div class="container1">
+        <!--navigation-->
+        <div class="navhold">
+
+            <div class="nav1">
+
+                <!--website logo-->
+                <div id="logo">
+                    <a href="/"> <img class="logo" src="../logo/white.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!--display  profile-->
+                <div class="divdrop11">
+                    <!--profile picture-->
+                    <div class="logo2">
+                        <img class="prof" src="./profile/profile2.jpg" alt="" srcset="">
+                    </div>
+                </div>
+
+                <!--bell icon-->
+                <h4 style="font-size:24px" class="fa ta">&#xf0f3;
+                    <span class="badge"></span>
+                </h4>
+
+                <!--div drop down for accounts-->
+                <div class="divdropnav">
+                    <p class="vmail">{{vm.email}}</p>
+                    <hr>
+                    <p class="vcount">Account</p>
+                    <p class="vlogout vcount">Logout</p>
+                </div>
+
+                <!--div drop for notifiction-->
+                <div class="divdropnotification">
+                    <h2 class="notif">Notifications</h2>
+                    <hr>
+                    <p class="cl">You're Clear!</p>
+                </div>
+
+            </div>
+
+            <!--navigation links-->
+            <div class="navlinks">
+                <!--burger icon-->
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <a href="/findinvestors" class="link nav23">Find investors</a>
+                <a href="/mystartups" class="link nav11">My Startups</a>
+                <a href="/savedinvestors" class="link nav22">Saved investors</a>
+                <a href="/messages" class="link nav2">Messages
+                    <span class="badge2"></span>
+                </a>
+                <a href="/post" class="link nav3">Post</a>
+
+            </div>
+
+        </div>
+
+        <!--loading screen circle-->
+        <div class="loader"></div>
+
+        <!--if there arent any saved investors-->
+        <div class="inv1">
+            <div class="inv">
+                <p class="p">Save investors who interest you by clicking on "save investor" on the bottom right of the
+                    investor.</p>
+                <br><br>
+                <a class="btn1" href="/findinvestors">Find investors</a>
+            </div>
+        </div>
+        <!--div holding investors-->
+        <div class="investors">
+            <div class="investor">
+            </div>
+        </div>
+
+ <!--div holding the message pop-up-->
+ <div class="message1">
+
+    <div class="message2">
+        <!--div holding the profile been messaged to-->
+        <div class="profile2">
+            <input type="hidden" class="inid">
+            <input type="hidden" class="enid">
+
+            <!--div holding the image-->
+            <div class="imgp">
+                <div class="imgp2"></div>
+            </div>
+
+            <!--div holding the name and type-->
+            <div class="np">
+
+                <!--p holding the name-->
+                <p class="namep"></p>
+
+                <!--p holding the location-->
+                <p class="typep fa fa-map-marker"> </p>
+            </div>
+
+            <button class="insert">Insert</button>
+            <!--div to select startup-->
+            <div class="insert1">
+                <p class="pk">Select startup below</p>
+            </div>
+
+            <button class="close">X</button>
+        </div>
+
+
+        <!--div holding the text box-->
+        <div class="text">
+            <!--text area-->
+            <textarea placeholder="Type message here! Click insert to paste your startups link" id="txt"
+                class="txt1"></textarea>
+            <!--div to paste links to-->
+            <div class="link23"></div>
+            <p class="error">You can't send an empty message.</p>
+            <!--send button-->
+            <button class="send">Send</button>
+        </div>
+
+    </div>
+
+    <!--Once message is sent-->
+    <div class="message3">
+        <div class="msg">
+            <button class="iop">X</button>
+            <p class="msgt">Message Sent <span style="color: lawngreen;">&#10004;</span> </p>
+        </div>
+    </div>
+
+    <!--Subscribe pop-up-->
+    <div class="subpop">
+        <div class="subpop1">
+            <h1 class = "subpopp">Get premium</h1>
+            <p class = "subpop2"></p>
+            <p class = "subpop3"></p>
+            
+            <br>
+            <div class="plan">
+                <p class="p1 p2">Premium</p>
+                <p class="p1 p3">$20.99</p>
+                <p class="p1 p4">per month</p>
+            </div>
+            <br><br>
+
+            <a class = "blink" href="/billing">Continue</a>
+            <br><br><br>
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+        

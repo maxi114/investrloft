@@ -1,0 +1,39 @@
+.container1{
+    text-align: center;
+}
+.verify{
+    border: solid 1px lawngreen;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: white;
+}
+/*div holding the login button*/
+.button{
+    text-align: center;
+    height: 100px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 100px;
+    
+    }
+.logo1{
+    width: 130px;
+    margin-top: 20px;
+}
+.btn{
+    text-decoration: none;
+    color: white;
+    outline: none;
+    font-size: 20px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    color: lawngreen;
+}
+.error{
+    color: red;
+}

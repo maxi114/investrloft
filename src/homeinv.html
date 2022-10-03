@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/homeinv.css">
+</head>
+
+<body>
+
+    <div class="container1">
+
+        <!--contact us form-->
+        <div class="cont1">
+            <div class="contact-form">
+                <h1>Contact Us</h1>
+
+                <button class="close">X</button>
+                <div class="txtb">
+                    <label for="">Name :</label>
+                    <input type="text" ng-model="vm.contact.name" placeholder="Enter Your Name">
+                </div>
+
+                <div class="txtb">
+                    <label for="">Email :</label>
+                    <input type="Email" ng-model="vm.contact.email" placeholder="Enter Your Email">
+                </div>
+
+                <div class="txtb">
+                    <label for="">Message :</label>
+                    <textarea name="" id="" ng-model="vm.contact.message" cols="30" rows="10"></textarea>
+                </div>
+
+                <p class="error">{{vm.error}}</p>
+
+                <div class="btn">
+                    <button class="btn1">Send </button>
+                    <i class="fa fa-circle-o-notch fa-spin" id="spin3"></i>
+                </div>
+            </div>
+        </div>
+
+        <!--first section-->
+        <div class="section1">
+
+            <!--div holding the navigation bar-->
+            <nav class="nav">
+
+                <!--logo-->
+                <h1 class="logo">Investrloft</h1>
+
+                <!--div holding home contatc us and terms of service links-->
+                <div class="links1">
+
+                    <a class="linkk nv" href="/homent">Startups</a>
+
+                    <a class="linkk nv nvl">Contact Us</a>
+
+                    <a class="linkk nv nvl2" href="/termsofservice">Terms of Service</a>
+
+                </div>
+
+                <!--burger icon-->
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                <!--sign up button-->
+                <a class="signup " href="/whoami"> SIGN UP FREE</a>
+
+                <!--div holding the loginbutton-->
+                <div class="links2">
+
+                    <!--login link-->
+                    <a class="linkk nv2 nv21" href="/login">Login</a>
+
+                </div>
+
+
+
+            </nav>
+
+            <!--info-->
+            <div class="info">
+                <h1 class="txt1 txx">Find your next startup Investment with confidence.</h1>
+                <p class="txt2">Connecting investors and college startups seamlessly.</p>
+                <a href="/investorgt" class="gts">GET STARTED FOR FREE</a>
+
+                <!--main img-->
+                <div class="info2">
+
+
+                    <!--down left image-->
+                    <img class="lftimg" src="./images/Group 48.png" alt="" srcset="">
+
+                    <!--up right image-->
+                    <img class="upcirc" src="./images/Ellipse 10.png" alt="" srcset="">
+                    <img class="uplin" src="./images/Vector.png" alt="" srcset="">
+                </div>
+            </div>
+
+        </div>
+
+        <!--section2-->
+        <div class="section2">
+            <h1 class="txt3">How it works?</h1>
+            <h2 class="txt4">Investor</h2>
+            <img class="vct2" src="./images/Vector 2.png" alt="" srcset="">
+
+            <!--div holding the steps-->
+            <div class="steps">
+
+                <!--Browse the startups-->
+                <div class="browse boxst">
+                    <img class="img301" src="./images/rocket (1) 1.png" alt="" srcset="">
+                    <h2 class='sch'>Go through startups</h2>
+                    <p class="scp">Browse through the startps and find the one(s) that intrests your investment.</p>
+                </div>
+
+                <!--Request to invest-->
+                <div class="invest boxst">
+                    <img class="img301" src="./images/investment 1.png" alt="" srcset="">
+                    <h2 class='sch'>Request investment</h2>
+                    <p class="scp">Once you find a good startup to invest in, request to invest in the startup.</p>
+                </div>
+
+                <!--Accepted-->
+                <div class="accepted boxst">
+                    <img class="img301" src="./images/file (3) 1.png" alt="" srcset="">
+                    <h2 class='sch'>Accepted request</h2>
+                    <p class="scp">Be on the look out to see if the startup accepted your investment request.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--section3-->
+        <div class="section3">
+        </div>
+
+        <!--div holding the 5th section of the page-->
+        <div class="section5">
+
+            <div class="instrop11">
+                <img src="./images/college2.png" class="college2" alt="" srcset="">
+            </div>
+
+            <div class="instrpo">
+
+                <div class="innn">
+                    <h2 class="s5h">Typical college startups on Investrloft.</h2>
+
+                    <p class="ppw">The typical college startups on our platform are early stage technology ventures
+                        offering either a consumer or enterprise product. </p>
+
+                    <br><br>
+                    <a class="invstr" href="/investorgt">Start Investing</a>
+                </div>
+            </div>
+
+            <!--notify of investors form-->
+            <div class="not1">
+                <div class="notify-form">
+                    <h1>Refer startup.</h1>
+
+                    <button class="close1">X</button>
+
+                    <div class="txtb">
+                        <label for="">Email :</label>
+                        <input type="email" class="emnot" ng-model="vm.notify.email" placeholder="Enter startups email"
+                            required>
+                    </div>
+
+                    <p class="error1">{{vm.error1}}</p>
+
+                    <div class="btn2">
+                        <button class="btn3">Refer startup</button>
+                        <i class="fa fa-circle-o-notch fa-spin" id="spin4"></i>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="btottm">
+                <p class="s5p">Know of startups who would like to get along?</p>
+
+                <a class="s5b">Refer them here</a>
+            </div>
+
+            <div class="sct5">
+
+                <!--div on the left holding picture-->
+                <div class="sct1 di"></div>
+
+                <!--dic holding the main investor-->
+                <div class="sct2 di">
+
+                    <!--left arrow-->
+                    <div class="left arrow"></div>
+
+                    <!--right arrow-->
+                    <div class="right arrow"></div>
+
+
+                </div>
+
+                <!--div on the right holding picture-->
+                <div class="sct3  di"></div>
+
+            </div>
+            <br><br><br><br>
+
+        </div>
+
+        <br><br><br><br>
+        <!--div holding the footer of the page-->
+        <div class="footer" id="footer">
+
+            <ul>
+                <li> <a href="/company">Company</a> </li>
+                <!--<li class="fli"> <a href="/support">Support</a> </li>-->
+                <!--<li class="fli2"> <a href="/partnership">Partnership</a> </li>-->
+                <li><a href="/termsofservice">Terms of service</a></li>
+            </ul>
+
+            <p class="fp"> Email: support@investrloft.com</p>
+            <br>
+            <p class="fp">© 2021</p>
+
+        </div>
+
+        <br><br>
+        <script src="./js/homeinv.js"></script>
+    </div>
+</body>
+
+</html>

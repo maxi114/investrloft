@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+
+    <div class="containerr">
+
+        <!--contact us form-->
+        <div class="cont1">
+            <div class="contact-form">
+                <h1>Contact Us</h1>
+
+                <button class="close">X</button>
+                <div class="txtb">
+                    <label for="">Name :</label>
+                    <input type="text" ng-model="vm.contact.name" placeholder="Enter Your Name">
+                </div>
+
+                <div class="txtb">
+                    <label for="">Email :</label>
+                    <input type="Email" ng-model="vm.contact.email" placeholder="Enter Your Email">
+                </div>
+
+                <div class="txtb">
+                    <label for="">Message :</label>
+                    <textarea name="" id="" ng-model="vm.contact.message" cols="30" rows="10"></textarea>
+                </div>
+
+                <p class="error">{{vm.error}}</p>
+
+                <div class="btn">
+                    <button class="btn1">Send </button>
+                    <i class="fa fa-circle-o-notch fa-spin" id="spin3"></i>
+                </div>
+            </div>
+        </div>
+
+        <!--div holding the navigation bar-->
+        <nav class="nav">
+
+            <!--logo-->
+            <h1 class="logo">Investrloft</h1>
+
+            <!--div holding home contatc us and terms of service links-->
+            <div class="links1">
+
+                <a class="linkk nv nvl1" href="/homeinv">Investors</a>
+
+                <a class = "linkk nv nvl4" href="/homent">Startups</a>
+
+                <a class="linkk nv nvl">Contact Us</a>
+
+                <a class="linkk nv nvl2" href="/termsofservice">Terms of Service</a>
+
+            </div>
+
+            <!--burger icon-->
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <!--sign up button-->
+            <a class="signup " href="/whoami"> SIGN UP FREE</a>
+
+            <!--div holding the loginbutton-->
+            <div class="links2">
+
+                <!--login link-->
+                <a class="linkk nv2 nv21" href="/login">Login</a>
+
+            </div>
+
+
+
+        </nav>
+
+        <!--section1-->
+        <div class="section1">
+            <h1 class = "txt1" >A platform connecting college startups with Investors.</h1>
+            <p class = "txt2" >Investrloft connects college startups in need of funding with investors. </p>
+
+            <!--image-->
+            <img src="./images/Untitled design (1).png" class = "info2" alt="" srcset="">
+           
+
+        </div>
+
+        <!--section2-->
+        <div class="section2">
+            
+            <label for="account" class = "cnt">Connect me with  </label>
+
+            <select name="account" id="" class = "cnt2">
+                <option value="investor">Investors</option>
+                <option value="startups">Startups</option>
+            </select>
+            <br>
+            <button class = "strt" > Get Started</button>
+
+        </div>
+
+        <!--div holding the footer of the page-->
+        <div class="footer" id="footer">
+
+            <ul>
+                <li> <a href="/company">Company</a> </li>
+                <!--<li class="fli"> <a href="/support">Support</a> </li>-->
+                <!--<li class="fli2"> <a href="/partnership">Partnership</a> </li>-->
+                <li><a href="/termsofservice">Terms of service</a></li>
+            </ul>
+
+            <p class="fp"> Email: support@investrloft.com</p>
+            <br>
+            <p class="fp">© 2021</p>
+
+        </div>
+
+        <script src="./js/home.js"></script>
+    </div>
+
+    <br><br><br><br>
+</body>
+
+</html> 

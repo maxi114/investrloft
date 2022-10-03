@@ -1,0 +1,68 @@
+/*center the text on the page*/
+.container{
+    text-align: center;
+}
+
+/*logo*/
+.logo{
+    width: 100px;
+    height: 100px;
+}
+/*style email input*/
+#email{
+    border: solid 1px black;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+}
+
+/*style the button*/
+.btn{
+    cursor: pointer;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: black;
+    outline: none;
+    color: white;
+    border: none;
+}
+.btn:hover{
+    color: #3f3fa0;
+}
+
+/*center the input div vertically*/
+.inp{
+    margin-top: 100px;
+}
+
+/*validation style*/
+.valid{
+    color:  lawngreen;
+}
+.invalid{
+    color: orange;
+}
+input+p{
+    font-family: arial;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 10px;
+    color: orange;
+    opacity: 0;
+    height: 0;
+}
+input.invalid+P{
+    opacity: 1;
+    height: auto;
+    margin-bottom: 10px;
+}
+.message{
+    color:  #3f3fa0;
+}
+.error{
+    color: red;
+}

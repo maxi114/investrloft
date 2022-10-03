@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="css/startuprgt.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEosJpwPi93NGAXxn0y3mHBZHEkFr9zd4&libraries=places&callback=initialize"></script>
+    <title>Investrloft</title>
+</head>
+
+<body>
+
+    <script>
+        var searchInput = 'search_input';
+
+        function initialize() {
+            var autocomplete;
+            autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+                types: ['geocode'],
+            });
+
+            google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                var near_place = autocomplete.getPlace();
+
+                //loop through the address componenets
+                for (var i = 0; i < near_place.address_components.length; i++) {
+
+                    //if the type is state
+                    if (near_place.address_components[i].types[0] == "administrative_area_level_1") {
+                        document.getElementById('state').value = near_place.address_components[i].short_name;
+                    }
+
+                    //if the type is country
+                    if (near_place.address_components[i].types[0] == "country") {
+                        document.getElementById('country').value = near_place.address_components[i].short_name;
+                    }
+                }
+                document.getElementById('loc_lat').value = near_place.geometry.location.lat();
+                document.getElementById('loc_long').value = near_place.geometry.location.lng();
+                document.getElementById('city').value = near_place.vicinity;
+
+            });
+        }
+
+
+    </script>
+
+    <div class="hold">
+        <!--container on the left-->
+        <div class="container2">
+            <div class="ct2">
+                <h1 class="c2">Lets get started!</h1>
+                <p class="c22">Fill out the form on the right and start connecting with investors.</p>
+            </div>
+
+        </div>
+
+        <!--container on the right-->
+        <div class="container1">
+
+            <h2 class="sr">Startup registration</h2>
+            <!--new account bar-->
+            <div class="signupbar">
+                <!--signup form-->
+                <form class="form" autocomplete="on">
+
+                    <p class="error">{{vm.error}}</p>
+
+                    <span>Name*</span>
+                    <br>
+                    <!--fistr name-->
+                    <input type="text" name="FirstName" placeholder="Fisrt Name" ng-model="vm.startup.FirstName"
+                        autocomplete="given-name" id="text" required>
+
+                    <!--last name-->
+                    <input type="text" name="Last Name" placeholder="Last Name" ng-model="vm.startup.LastName" id="text"
+                        required>
+
+                    <br><br>
+                    <span>Email*</span>
+                    <br>
+                    <input type="email" name="email" placeholder="Email" ng-model="vm.startup.email" id="text" required>
+                    <p>Email must be a valid address, e.g. me@mydomain.com</p>
+
+                    <span>School*</span>
+                    <p class = "show" >What school do you attend?</p>
+                    <input type="text" ng-model="vm.startup.school" placeholder="school" ng-model="vm.startup.school" id="text" required>
+
+                    <span>Bio*</span>
+                    <!--biography-->
+                    <p class="show">let investors know who you are. What is your background? ( relating to your
+                        startup(S) )
+                    </p>
+                    <textarea ng-model="vm.startup.bio" class="bio" required></textarea>
+                    <br>
+                    <span>Address*</span>
+                    <!--city-->
+                    <p class="show">To provide you with investors closest to you.</p>
+                    <!-- Autocomplete location search input -->
+                    <div class="form-group">
+                        <input type="text" name="customname" placeholder="Type location.." class="form-control"
+                            id="search_input" autocomplete="off" required />
+                        <input type="hidden" id="loc_lat" />
+                        <input type="hidden" id="loc_long" />
+                        <input type="hidden" id="city" />
+                        <input type="hidden" id="state" />
+                        <input type="hidden" id="country" />
+                    </div>
+
+                    <!-- to get the positio of the user-->
+                    <h2 class="wis">What is your position in the startup?*</h2>
+                    <input type="text" id="text" ng-model="vm.startup.position"
+                        placeholder="eg ceo, co-founder, representative" required>
+
+                    <br><br>
+                    <span>Create password*</span>
+                    <input type="password" name="password" placeholder="Password" ng-model="vm.startup.password"
+                        id="text" required>
+                    <p>Password must be 8-20 Characters (@,- and_ are also allowed)</p>
+
+                    <!-- <input type="text" placeholder="confirm password" ng-model="vm.user.confirmPassword" id="text">
+                <p>Passwords must match</p>-->
+                    <br><br>
+                    <input ng-click="vm.agree()" type="checkbox" ng-model='vm.checked'>
+                    <a href="/termsofservice" class="checkbox">I agree to the Terms Of Service & Privacy Policy
+                    </a>
+                    <br>
+                    <p class="error">{{vm.error}}</p>
+                    <br><br>
+                    <button class="submit" ng-click="vm.register()">Register</button>
+
+                    <!--signin link-->
+                    <br><br>
+                    <a href="/login" class="redirect">already have an account? signin</a>
+                </form>
+
+
+
+                <!--pop out bar-->
+                <div class="pop-up">
+                    <div class="pop-up1">
+                        <h1>verify your email</h1>
+                        <h3>A verification link has been sent to your email. Please wait for at least five minutes to
+                            recieve the
+                            email then you may login.</h3>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="./js/register.js"></script>
+    <br><br>
+</body>
+
+</html>

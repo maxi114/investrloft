@@ -1,0 +1,878 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: whitesmoke;
+}
+
+.subpop{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    display: none;
+    z-index: 1;
+}
+.subpopp{
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    color: rgb(66, 65, 65);
+    margin: 10px;
+    background-color: #2f2fa2;
+    color: white;
+    width: 100%;
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.subpop1{
+    background-color: white;
+    width: 300px;
+    border-radius: 5px;
+}
+.subpop2{
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 25px;
+    color: rgb(66, 65, 65);
+    margin-bottom: 5px;
+}
+.subpop3{
+    height: fit-content;
+    opacity: 1;
+    color: rgb(107, 106, 106);
+    margin: 0px;
+    max-width: 200px;
+    margin: auto;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+  }
+li{
+    text-align: left;
+    width: 240px;
+    color: rgb(107, 106, 106);
+    margin: 0px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.blink{
+    text-decoration: none;
+    outline: none;
+    padding: 10px 15px 10px 15px;
+    font-size: 19px;
+    border-radius: 5px;
+    color: white;
+    background-color: #2f2fa2;
+    cursor: pointer;
+}
+.plan{
+    border: solid 2px #2f2fa2;
+    border-radius: 5px;
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+}
+.p1{
+    margin: 10px;
+}
+.p2{
+    color: #676767;
+    font-size: 19px;
+}
+.p3{
+    font-size: 25px;
+    color: #2f2fa2;
+}
+.p4{
+    color: #676767;
+    font-size: 19px;
+}
+
+.loader {
+    border: 5px solid grey; /* Light grey */
+    border-top: 5px solid #2f2fa2; /* Blue */
+    border-left: 5px solid #2f2fa2;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+/* center the text on the page on the center*/
+.container1{
+text-align: center;
+display: block;
+max-height: max-content;
+}
+
+/*--------stying and positioning the navigation bar-------------*/
+
+/*navigation div 1*/
+.navhold{
+    width: 100vw;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+}
+.nav1{
+    background-color: #2f2fa2;
+    height: 50px;
+}
+.ws{
+    height: 20px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    right: 20px;
+}
+#watches{
+    margin: 0px;
+    width: max-content;
+    float: right;
+    padding: 0px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+.saves{
+    margin: 0px;
+    width: max-content;
+    float: right;
+    padding: 0px;
+    font-size: 15px;
+    color: grey;
+}
+/*website logo*/
+#logo{
+    width: 100px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.logo{
+    width: 100%;
+}
+
+/*profile logo*/
+.logo2{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0px;
+    margin-top: 2px;
+    background: #f64c72;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    text-transform: uppercase;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* down arrow */
+.divdrop11{
+    width: max-content;
+    float: right;
+    margin-right: 20px;
+}
+.divdrop11:hover {
+    cursor: pointer;
+}
+
+/*h4 bell notification*/
+.fa{
+    margin: 0px;
+    float: right;
+    margin-right: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+}
+.fa .badge {
+    position: absolute;
+    top: -5px;
+    right: -1px;
+    padding: 6px 6px;
+    border-radius: 50%;
+    background: orange;
+    color: white;
+    display: none
+  }
+/*div dropdown*/
+.divdropnav{
+    position: absolute;
+    border: solid 1px white;
+    background-color: white;
+    box-shadow: 0px 2px 10px 1px grey;
+    width: 200px;
+    right: 0;
+    margin-top: 50px;
+    word-wrap: break-word;
+    display: none;
+    z-index: 1;
+}
+
+/*email displayed in the drop down*/
+.vmail{
+    color: grey;
+}
+
+/*account $ logout displayed in the dropdown*/
+.vcount{
+    font-size: 20px;
+    font-weight: normal
+}
+
+.vcount:hover{
+    cursor: pointer;
+}
+
+/* navigation links*/
+.navlinks{
+    box-shadow: 0px 2px 10px 1px grey;
+    height: 30px;
+    background-color: white;
+}
+
+.link{
+    text-decoration: none;
+    line-height: 1.25;
+    width: 20px;
+    color: black;
+    margin: 40px;
+    font-size: 17px;
+}
+.nav2{
+    position: relative;
+}
+.badge2{
+    position: absolute;
+    top: -1px;
+    right: -4px;
+    padding: 6px 6px;
+    border-radius: 50%;
+    background: #f64c72;
+    color: white;
+    display: none;
+}
+.link:hover{
+    color: grey;
+}
+.nav3{
+    margin-right: 0px;
+}
+.nav23{
+    margin-left: 0px;
+}
+.nav11{
+    border-bottom: solid 2px #2f2fa2;
+}
+/*drop down for notifications*/
+.divdropnotification{
+    position: absolute;
+    text-align: center;
+    border: solid 1px white;
+    background-color: white;
+    box-shadow: 0px 2px 10px 1px grey;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-top: 50px;
+    z-index: 1;
+    display: none;
+}
+.notif{
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    color: rgb(66, 65, 65);
+}
+.pop-up{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+}
+.pop-up1{
+    width: 500px;
+    height: 290px;
+    background-color: lawngreen;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/*yes button on the pop up window*/
+.yes{
+    padding: 15px;
+    background-color: white;
+    color: red;
+    border: solid 1px red;
+    border-radius: 10px;
+    outline: none;
+}
+/*yes button on the pop up window when the mouse is over it*/
+.yes:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+/*no button on the pop up window*/
+.no{
+    outline: none;
+    margin-left: 20px;
+    padding: 15px;
+    background-color: white;
+    border: solid 1px lawngreen;
+    border-radius: 20px;
+}
+/*no button on the pop window when the mouse is over it*/
+.no:hover{
+    cursor: pointer;
+    background-color: lawngreen;
+}
+.name{
+    color: #2f2fa2;
+    text-transform: capitalize;
+}
+/* The dots/bullets/indicators */
+.dot {
+    display: inline-flex;
+    height: 15px;
+    margin: 2px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+  }
+.dot1{
+position: absolute;
+margin-top: 252px;
+width: 300px;
+}
+/*stye and position post yout first product link*/
+.pr2{
+    position: relative;
+    margin-top: 120px;
+    height: 60vh;
+}
+.first-product{
+    position: absolute;
+    padding: 10px;
+    width: max-content;
+    margin: auto;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.product{
+    width: 500px;
+    height: 500px;
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
+.img6{
+    width: 100%;
+}
+.products{
+    max-width:960px;
+    margin:auto;
+    position: relative;
+    margin-top: 120px;
+}
+/*position the produts from the database*/
+  .myslidediv{
+      position: relative;
+    width:300px;
+    height:250px;
+    margin-bottom: 25px;
+    float: left;
+  }
+  .mySlides{
+      max-width: 100%;
+      max-height: 100%;
+      margin: 2px;
+     position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .test{
+      position: relative;
+      width: 100%;
+      float: left;
+      margin-bottom: 10px;
+      background-color: white;
+  }
+  .switch2{
+      position: absolute;
+      width: 300px;
+      padding: 20PX;
+      background-color: rgb(47, 47, 162,.9);
+      top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .switch22{
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 20px;
+    color: white;
+  }
+  /*button to delete or edit the product/company/idea*/
+  .edit1{
+      text-align: right;
+      margin-top: 100px;
+      margin-right: 10px;
+      border: none;
+      padding: 15px;
+      font-size: 15px;
+  }
+  /*edit button*/
+  .edit{ 
+      background-color: white;
+      border: solid 1px #2f2fa2;
+      border-radius: 5px;
+  }
+  /*edit button when the mouse is over it*/
+  .edit:hover{
+      background-color: #2f2fa2;
+      color: white;
+      cursor: pointer;
+  }
+  
+  /*delete button*/
+  .delete{
+      color: red;
+      background-color: white;
+      border: solid 1px red;
+      border-radius: 5px;
+  }
+  /*delete button when the mouse is over it*/
+  .delete:hover{
+      color: white;
+      background-color: red;
+      cursor: pointer;
+  }
+  .offer1{
+    text-align: left;
+    float: left;
+    max-width: 400px;
+    margin:auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.description {
+    margin: 0px;
+    margin: auto;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(67, 73, 78);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: pre-wrap;
+}
+
+.description2{
+    margin: 0px;
+    margin: auto;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(67, 73, 78);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: pre-wrap;
+}
+.offer {
+    margin: 0px;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #2f2fa2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.burger{
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.burger div{
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+}
+
+.line{
+    margin-top: 0px;
+}
+
+.p{
+    font-size: 17px;
+    letter-spacing: 0;
+    font-weight: 400;
+    line-height: 1.43;
+    margin: 0px;
+    width: 99%;
+}
+.btn1{
+    border: solid 1px #2f2fa2;
+    font-size: 15px;
+    padding: 13px 40px 13px 40px ;
+    color:#2f2fa2;
+    background-color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: absolute;
+    display: inline-block;
+    margin: 0px;
+    width: 50px;
+    height: 24px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .public{
+      position: absolute;
+      margin: 0px;
+      bottom: 10px;
+      right: 70px;
+      line-height: 20px;
+    font-weight: 400;
+    color: rgb(67, 73, 78);
+  }
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2f2fa2;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2f2fa2;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/*navigation bar on small screens*/
+@media screen and (max-width: 830px){
+    /*navigation bar*/
+    .nav1{
+        position: relative;
+        text-align: center;
+    }
+    /*website logo*/
+    #logo{
+        margin: 0;
+        margin-top: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /*profile logo*/
+    .divdrop11{
+        float: left;
+        margin-left: 20px;
+    }
+    /*hide the name*/
+    .divdrop1{
+        display: none;
+    }
+    /*bellicon*/
+    .fa{
+        margin-right: 20px;
+    }
+    /*div  dropdown*/
+    .divdropnav{
+        margin-right: 0px;
+        width: 100vw;
+    }
+    /*navigation links*/
+    .navlinks{
+        height: max-content;
+        transition: .5s;
+    }
+    .link{
+        display: none;
+        width: 100%;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+        padding: 20px 0px 20px 0px;
+        font-size: 23px;
+        margin: 0px;
+    }
+    .badge2{
+        right: 20px;
+        top: 20px;
+        margin: 0px;
+        padding: 6px 6px;
+        border-radius: 50%;
+        background: #f64c72;
+        color: white;
+        display: none;
+        z-index: 1;
+    }
+    .nav11{
+        color: white;
+        background-color: rgb(47, 47, 162,.7);
+        border: none;
+    }
+
+    .nav3{
+        border: none;
+    }
+
+    .nav23{
+        padding-top: 0px;
+    }
+    /*display the burger icon*/
+    .burger{
+        display: block;
+        max-width: 40px;
+        margin: auto;
+    }
+    .burger :first-child{
+        margin-top: 0px;
+    }
+
+    .nav-active{
+        display: inline-block
+    }
+}
+/*set the layout on screens that are less than 500*/
+@media screen and (max-width: 500px) {
+    
+    body{
+        background-color: white;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    /*product image and video*/
+    .myslidediv{
+        width: 100%;
+        height: 280px;
+        margin-bottom: 60px;
+        border-top: solid .1px black;
+    }
+    .mySlides{
+        margin: 0px;
+        margin-bottom: 15px;
+    }
+    /*the products descrtipion*/
+    .offer1{
+        float: none;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+   
+    .delete{
+        float: left;
+        margin-top: 10px;
+        margin-left: 25%;
+        margin-bottom:50px;
+    }
+    .edit{
+        float: right;
+        margin-top: 10px;
+        margin-right: 25%;
+        margin-bottom: 50px;
+    }
+      /*dots*/
+      .dot1{
+        margin-top: 285px;
+        width: 100%;
+        left: 0;
+      }
+      .dot2{
+          max-width: 650px;
+          margin: auto;
+      }
+      .ws{
+        right: unset;
+        margin-top: 310px;
+        left: 50%;
+        transform: translate(-50%);
+      }
+}
+
+/*navigation bar*/
+@media screen  and (min-width: 831px) and (max-width:999px){
+    .link{
+        margin: 20px;
+        width: max-content;
+    }
+    .nav3{
+        margin-right: 0px;
+    }
+ }
+
+/*navigation bar*/
+@media screen  and (min-width: 501px) and (max-width:700px){
+   .link{
+       padding: 15px;
+   }
+}
+/*set the layout on screens that are more than 501px and less than 909px*/
+@media screen and (min-width: 501px) and (max-width: 909px){
+    /*product image and video*/
+    .myslidediv{
+        width: 100%;
+        height: 300px;
+        margin-bottom: 50px;
+    }
+
+    /*the products description*/
+    .offer1{
+        max-width: 758px;
+        margin: auto;
+        text-align: center;
+        float:none;
+    }
+    .test{
+        max-width: 675px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .products{
+        max-width: 675px;
+        margin: auto;
+        height: max-content;
+        margin-top: 120px;
+    }
+     /*dots*/
+    .dot1{
+        margin-top: 302px;
+        width: 100%;
+        left: 0;
+      }
+      .dot2{
+          max-width: 650px;
+          margin: auto;
+      }
+      .ws{
+        right: unset;
+        margin-top: 325px;
+        left: 50%;
+        transform: translate(-50%);
+      }
+}
+/*buttons and dots*/
+@media screen and (min-width:501px) and (max-width:909px){
+    .delete{
+        float: left;
+        margin-top: 10px;
+        margin-left: 35%;
+        margin-bottom:50px;
+    }
+    .edit{
+        float: right;
+        margin-top: 10px;
+        margin-right: 35%;
+        margin-bottom: 50px;
+    }
+ 
+    .description{
+        max-width: 400px;
+        margin: auto;
+    }
+    .description2{
+        max-width: 400px;
+        margin: auto;
+    }
+}
+

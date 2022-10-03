@@ -1,0 +1,317 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.info{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color:black;
+}
+
+.name{
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 40px;
+    color: whitesmoke;
+    text-transform: capitalize;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    position: absolute;
+    line-height: 150px;
+}
+
+.type{
+    text-align: center;
+    margin: 0px;
+    font-weight: normal;
+    font-family: "sans-serif";
+    font-size: 25px;
+    color: white;
+    text-transform: capitalize;
+    display: inline-block;
+    overflow: hidden;
+    height: 35px;
+    margin-top: 90px;
+}
+
+.lc{
+    margin-left: 10px;
+}
+
+
+/*div holding the profile picture*/
+.pc{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 130px;
+    background-color: #3f3fa0;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    line-height: 150px;
+    font-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*div holding the bio*/
+.bio{
+    max-width: 1000px;
+    padding: 15px;
+    margin: auto;
+}
+
+.br{
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    color: rgb(66, 65, 65);
+    text-align: left;
+}
+
+.bio2{
+    text-align: left;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 20px;
+    color: rgb(107, 106, 106);
+    border-radius: 5px;
+    white-space: pre-wrap;
+}
+
+/*the industries*/
+.indus{
+    text-align: left;
+}
+.ind{
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    color: rgb(66, 65, 65);
+    text-align: left;
+}
+
+.stype{
+    font-weight: normal;
+    line-height: 1.25;
+    font-family: "sans-serif";
+    font-size: 30px;
+    color: rgb(66, 65, 65);
+    text-align: center;
+}
+
+.indus1{
+    text-transform: capitalize;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 20px;
+    color: white;
+    margin: 5px;
+    border: none;
+    background-color: grey;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/*-------------------style and position the prodcuts from the databse---------------*/
+.test{
+    position: relative;
+    width: 290px;
+    margin: 10px;
+    background-color: white;
+    border: solid .5px rgb(168, 168, 168);
+    height: 350px;
+}
+.idem{
+    display: none;
+}
+
+/*div holding the entrepreneurs profile*/
+.en{
+    height: 40px;
+    margin: 0px;
+    top: 5px;
+    position: relative;
+    cursor: context-menu;
+}
+.en2{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    top: 50%;
+    transform: translate(0%,-50%);
+    border-radius: 50%;
+    background-color: #2f2fa2;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    font-size: 11px;
+    color: white;
+    line-height: 25px;
+}
+.en3{
+    position: absolute;
+    left: 0;
+    margin-left: 42px;
+    width: 200px;
+    height: 40px;
+}
+.enpp{
+    margin: 0px;
+    text-align: left;
+    color: #0e0e0f;
+    height: 17px;
+    font-size: 15px;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+.enp{
+    margin-top: 5px;
+}
+.enp2{
+    color: slategrey;
+}
+
+.name2{
+     margin: 10px 0px 10px 0px;
+     text-transform: capitalize;
+     font-size: 25px;
+     height: 27px;
+     color: #2f2fa2;
+     cursor: context-menu;
+}
+.description{
+    margin: 0px;
+    max-width: 250px;
+    text-align: left;
+    margin: auto;
+    height: 40px;
+    overflow: hidden;
+    cursor: context-menu;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(67, 73, 78);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: pre-wrap;
+}
+
+/* position dots in carousel */
+.flickity-page-dots {
+    top: 130px;
+  }
+  /* white circles */
+  .flickity-page-dots .dot {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border: 2px solid white;
+    opacity: 1;
+  }
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    background: white;
+  }
+
+.rating2{
+    font-size: 25px;
+    width: max-content;
+    border-bottom: solid 10px #2f2fa2;
+}
+.bdgt{
+    color:#2f2fa2
+}
+/*products*/
+.strt{
+    max-width: 1500px;
+    margin:auto;
+    margin-bottom: 50px;
+    max-height: 900px;
+    overflow: auto;
+}
+.products{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.flickity-button{
+    display: none;
+  }
+/*div holding the product images*/
+.img2{
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    height: 150px;
+    cursor: context-menu;
+}
+.img2:hover .flickity-button{
+    display: block;
+}
+.img3{
+    margin: 0px;
+    width: 100%;
+    height: 150px;
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+/*div holding the offers*/
+.of{
+    margin: 0px;
+    margin-top: 15px;
+    border-top: solid 1px rgb(168, 168, 168)
+}
+.offer2{
+    margin: 0px;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #2f2fa2;
+    margin-top: 5px;
+    cursor: context-menu;
+}
+.svr{
+    margin: 0px;
+    height: 35px;
+    display: inline-block;
+}
+.lc{
+    height: 20px;
+    margin-top: 10px;
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+#location2{
+    color: #696666;
+    margin: 0px;
+    cursor: context-menu;
+    text-align: left;
+    max-width: 240px;
+    overflow: hidden;
+    height: 20px;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>billing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/billing.css">
+</head>
+
+<body>
+
+
+  <div class="container">
+
+    <!--logo-->
+    <a href="/">
+      <img class="logo" src="logo/blue.png" alt="logo">
+    </a>
+
+    <!--navigation-->
+    <div class="navigation">
+      <a class="plink link" href="/profile">Profile</a>
+      <a class="Blink link" href="/billing">Billing</a>
+    </div>
+
+    <!--show when the type of account the user has doesn require billing-->
+    <div class="oops">
+      <p class = "oops1">oops! nothing to see here.</p>
+    </div>
+
+    <!--show to accounts that need billing-->
+    <div class="billin">
+      <p>sorry, but we are curently working on our billing backend. Dont worry we wount charge you or ask for
+        your credit card informtion during this period. Thankyou.</p>
+    </div>
+
+    <br><br>
+    <!--div subscribe-->
+    <div class="subscribe">
+      <br><br>
+      <h2 class="sub1">You are eligible for a two week free trial.</h2>
+
+      <div class="plan">
+        <p class="p1 p2">Premium</p>
+        <p class="p1 p3">$50.00</p>
+        <p class="p1 p4">per month</p>
+      </div>
+
+      <br><br>
+
+        <!--pop up window to show user messages-->
+        <div class="pop-up">
+          <div class="pop-up1">
+              <p class = "popp">{{vm.message}}</p>
+          </div>
+      </div>
+
+      <form id="subscription-form" class = "subscription-form">
+
+        <h2 class="pp pp1">Start your two week free trial today.</h2>
+        <p class="pp pp2 ppp2">billing will start after 14 days.</p>
+        <p class = "pp pp2 pp3">billed monthly. Cancel anytime.</p>
+        <br>
+        <div id="card-element" class="MyCardElement">
+          <!-- Elements will create input elements here -->
+        </div>
+
+        <!-- We'll put the error messages in this element -->
+        <div id="card-errors" role="alert"></div>
+        <br>
+        <button type="submit" class="submit">
+         <p class = "subb2">Subscribe</p> 
+         <i class="spin fa fa-circle-o-notch fa-spin" ></i> </button>
+        <br><br>
+      </form>
+
+      <br><br>
+      <p>Disclaimer: All transactions are subject to the Stripe Privacy Policy available at
+        <a href="https://stripe.com/ie/privacy" target="_blank">https://stripe.com/ie/privacy</a>
+      </p>
+
+      <br><br>
+    </div>
+
+    <!--payment methods-->
+    <div class="payment_methods">
+
+      <br><br>
+
+      <h2 class = "tt">Subscription settings</h2>
+      <br>
+      <!--div for the payment method-->
+      <div class="payment_methods2">
+        <br>
+        <h2 class="card">Subscription</h2>
+
+        <div class="sub1">
+        <p class="description2">Current plan</p> 
+        <p class = "subb1">Standard</p>
+        </div>
+
+        <div class="sub33">
+          <p class = "description4">Next billing period </p>
+          <p class = "subb3">{{vm.date}}</p>
+        </div>
+
+        <div class="sub2">
+        <p class="description3">Credit Card  <p class="card2">{{vm.cardbrand}} XXXX-{{vm.last4}}</p></p>
+        </div>
+
+        
+
+        <br>
+        <p class="Updatecard">Update Card</p>
+         
+        <p class = "cancel" id = "cancel">Cancel Subscription</p>
+  
+        </div>
+<br><br><br>
+      </div>
+    </div>
+
+    <br><br><br><br>
+    <!--div for the billing history-->
+    <div class="billing_history">
+      <h2>Invoice History</h2>
+      <br>
+      <table class="draft1">
+        <thead class="draftnav">
+          <tr class="draftnav2">
+            <th class="date jki">Date</th>
+            <th class="amount jki">Amount Due</th>
+            <th class = "status jki">Status</th>
+          </tr>
+        </thead>
+        <tbody class = "tbody">
+
+        </tbody>
+
+      </table>
+    </div>
+
+    <!--display receit pop-up-->
+    <div class="BillingReceit">
+      <div class="BillingReceit2">
+      </div>
+    </div>
+
+    <!--cancel subscription pop-up-->
+    <div class="popsub">
+      <div class="popsub2">
+        <div class="loader"></div>
+        <h2 class = "poppp2">Are you sure you want to cancel your subscription?</h2>
+        <p class = "poppp">You are currently canceling your subscription. Your subcription will cancel on the next billing period </p>
+        <button class = "yess2">Yes</button>
+        <button class = "noo2">No</button>
+        <br><br>
+      </div>
+    </div>
+
+  </div>
+
+  <br><br><br>
+</body>
+
+</html>

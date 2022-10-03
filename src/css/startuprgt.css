@@ -1,0 +1,308 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.error{
+    color: red;
+}
+
+.hold{
+    position: relative;
+    max-width: 1500px;
+    margin: auto;
+}
+.container1{
+    float: right;
+    width: 49%;
+    top: 0px;
+    position: relative;
+    height: 1250px;
+}
+/*container on the left*/
+.container2{
+
+    float: left;
+    height: 100vh;
+    background-image: url("../images/registerbackground.png");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: fixed;
+    width: 50%;
+}
+
+
+.ct2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.c2{
+    color: white;
+    line-height: 49px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.c22{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}
+.form{
+    position: absolute;
+    margin-top: 200px;
+    width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sr{
+    position: absolute;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 47px;
+    margin-top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    text-align: center;
+}
+
+#text{
+    width: 350px;
+height: 43.6px;
+
+border: 0.68125px solid #8692A6;
+box-sizing: border-box;
+border-radius: 4.0875px;
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 15.9px;
+line-height: 13px;
+margin-bottom: 20px;
+padding-left: 10px;
+font-family: Work Sans;
+    color: #484848;
+}
+
+span{
+    font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 15.9px;
+line-height: 13px;
+}
+
+.show{
+    font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 12px;
+color: #8692A6;
+margin-top: 0px;
+width: 300px;
+}
+
+#search_input{
+    width: 350px;
+    height: 43.6px;
+    
+    border: 0.68125px solid #8692A6;
+    box-sizing: border-box;
+    border-radius: 4.0875px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15.9px;
+    line-height: 13px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    color: #484848;
+}
+
+.bio{
+    width: 350px;
+height: 100px;
+border: 0.68125px solid #8692A6;
+box-sizing: border-box;
+border-radius: 4.0875px;
+margin-bottom: 20px;
+color: #484848;
+}
+
+/*industry*/
+.industry {
+    position: relative;
+    width: 200px;
+    margin: auto;
+    text-align: left;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    max-height: 200px;
+    overflow: auto;
+}
+.title {
+    margin: 20px;
+}
+.subtitle{
+    margin: 10px;
+    display: none;
+}
+.radio2{
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.wis{
+    font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 13px;
+}
+
+/*validation style*/
+.valid{
+    color:  #3f3fa0;
+}
+.invalid{
+    color: orange;
+}
+input+p{
+    font-family: arial;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 0 10px;
+    color: orange;
+    opacity: 0;
+    height: 0;
+}
+input.invalid+P{
+    opacity: 1;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.checkbox{
+    font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 15.9px;
+color: #696F79;
+outline: none;
+}
+
+.submit{
+    width: 350px;
+height: 43.6px;
+background: #3f3fa0;
+border-radius: 4.0875px;
+border: none;
+color: white;
+font-size: 15px;
+cursor: pointer;
+}
+
+.redirect{
+width: 350px;
+height: 16.35px;
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14.9px;
+line-height: 13px;
+text-align: center;
+color: #000000;
+margin-left: 19%;
+}
+
+/*pop-up*/
+.pop-up{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+}
+.pop-up1{
+    width: 500px;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pop-up1 h1{
+    line-height: 49px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    color: #3f3fa0;
+}
+
+.pop-up1 h3{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    max-width: 548px;
+    height: 46px;
+    text-align: left;
+    color: #484848;
+    padding: 10px;
+}
+
+@media screen and (min-width: 1500px){
+.container2{
+    width: 750px;
+}
+}
+
+@media screen and (max-width: 800px){
+    .container2{
+        display: none;
+    }
+    .container1{
+        width: 100%;
+        height: 1300px;
+        padding-bottom: 20px;
+    }
+
+    .form{
+        width: 300px;
+    }
+    #text{
+        width: 300px;
+    }
+    #search_input{
+        width: 300px;
+    }
+    .bio{
+        width: 300px;
+    }
+    .submit{
+        width: 300px;
+    }
+    .redirect{
+        max-width: 300px;
+        margin-left: 16%;
+    }
+}

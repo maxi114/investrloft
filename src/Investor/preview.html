@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--link for location icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEosJpwPi93NGAXxn0y3mHBZHEkFr9zd4&libraries=places&callback=initialize"></script>
+    <link rel="stylesheet" href="/node_modules/flickity/dist/flickity.min.css">
+    <script src="/node_modules/flickity/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="/node_modules/flickity-fullscreen/fullscreen.css">
+    <script src="/node_modules/flickity-fullscreen/fullscreen.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/preview.css">
+</head>
+
+<body>
+    <!--div holding the top of the page-->
+    <div class="container2">
+
+        <!--div holding the location-->
+        <div class="lc">
+            <i class="fa fa-map-marker" id="location"> {{vm.city}} {{vm.state}}</i>
+        </div>
+
+        <!--div holding the save and save startup btn-->
+        <div class="btns">
+            <button class="request btns1">Request Startup</button>
+            <button class="save btns1">Save Startup</button>
+        </div>
+    </div>
+
+    <!--div holding the left side of the page-->
+    <div class="container1">
+
+        <input type="hidden" class="idem" id="" value="">
+
+        <!--product title-->
+        <h2 class="title">{{vm.name}}</h2>
+
+        <!--div holding the products images-->
+        <div class="imgs1">
+        </div>
+
+        <!--div holding any video links-->
+        <div class="vidlink">
+            <h2 class = "vt">Video link(s)</h2>
+        </div>
+        
+        <div class="pen1"></div>
+        <div class="pen21">
+            <div class="pen2"></div>
+            <br>
+        </div>
+
+        <!--div holding the first description-->
+        <div class="descript1">
+            <h2 class="wedo">What this startup does.</h2>
+            <p class="des" readonly>{{vm.description}}</p>
+        </div>
+
+        <!--div hodling the second descripition if any-->
+        <div class="description2">
+            <h2 class="wedo2">{{vm.subtitle}}</h2>
+            <p class="descri">{{vm.description2}}</p>
+        </div>
+
+
+        <!--div holding startup price -->
+        <div class="price">
+            <div class="emp">
+                <p class = "emp1">Number of employees : <label class = "emppp">{{vm.employees}}</label></p>
+                <p class = "emp2">Raised capital: <label class = "emppp">{{vm.money2}}</label></p>
+                <p class = "emp3">Website: </p>
+            </div>
+        </div>
+
+        <!--div holding startup industries if any-->
+        <div class="ind"></div>
+
+        <!-- div holding the startup owner-->
+        <div class="owner">
+            <!--div holding the images name and startup type-->
+            <div class="owner2">
+                <p class = "infoen" hidden>{{vm.enid}}</p>
+                <!--div holding the profile-->
+                <div class="pr">{{vm.init}}</div>
+
+                <!--div holding the owners name -->
+                <div class="name">
+                    <p class="name1">{{vm.name2}}</p>
+                    <p class="type">Startup {{vm.type}}</p>
+                </div>
+            </div>
+
+            <!--div holding startup owner bio-->
+            <div class="bio">{{vm.bio}} </div>
+        </div>
+
+        <!--div for non existant startup-->
+        <div class="nostp">
+            <p>oops! looks like this startup doesn't exist anymore.</p>
+        </div>
+        <br><br>
+    </div>
+    <br><br>
+
+    <!--div holding the message pop-up-->
+    <div class="message">
+
+        <div class="message2">
+
+            <!--div holding the profile been messaged to-->
+            <div class="profile">
+
+                <p class="inid" style="display: none;">{{vm.inid}}</p>
+                <p class="enid" style="display: none;">{{vm.enid}}</p>
+
+                <!--div holding the image-->
+                <div class="imgp">
+                    <div class="imgp2">{{vm.init}}</div>
+                </div>
+
+                <!--div holding the name and type-->
+                <div class="np">
+
+                    <!--p holding the name-->
+                    <p class="namep">{{vm.name2}}</p>
+
+                    <!--p holding the type-->
+                    <p class="typep">Startup {{vm.type}}</p>
+                </div>
+
+                <button class="close">X</button>
+            </div>
+
+            <!--div holding the text box-->
+            <div class="text">
+
+                <!--text area-->
+                <textarea
+                    placeholder="Leave a message here if you may want to counteroffer or have a question for the startup"
+                    id="txt"></textarea>
+
+                <!--send button-->
+                <button class="send">Request Startup</button>
+            </div>
+
+        </div>
+
+        <!--Once request is sent-->
+        <div class="message3">
+            <div class="msg">
+                <button class="iop">X</button>
+                <h2 class="msgt">Request Sent <span style="color: lawngreen;">&#10004;</span> </h2>
+
+                <p class="msgp">{{vm.add}} You will be notified once the startup accepts you as their investor. In the
+                    meantime, you may keep looking for other potential investments.</p>
+            </div>
+        </div>
+
+        <!--withdraw message-->
+        <div class="withdraw2">
+            <p class="msgw">Are you sure you want to withdraw from investing in this startup ?</p>
+
+            <button class="yes wbtn">yes</button>
+            <button class="no wbtn">no</button>
+        </div>
+    </div>
+
+    <!--accept pop-up-->
+    <div class="accept1">
+        <!--loading circle-->
+        <div class="loader2"></div>
+    </div>
+    <!--loading circle-->
+    <div class="loader"></div>
+
+    <!--Subscribe pop-up-->
+    <div class="subpop">
+        <div class="subpop1">
+            <h1 class="subpopp">Get standard</h1>
+            <p class="subpop2">Investment Requests.</p>
+            <p class="subpop3">Get unlimited investment requests.</p>
+            <br>
+            <div class="plan">
+                <p class="p1 p2">Standard</p>
+                <p class="p1 p3">$10.99</p>
+                <p class="p1 p4">per month</p>
+            </div>
+            <br><br>
+
+            <a class="blink" href="/billing">Continue</a>
+            <br><br><br>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

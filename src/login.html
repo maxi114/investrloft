@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Investrloft</title>
+</head>
+
+<body>
+    <div class="conatiner1">
+        <!--logo if you click it it takes you back to home-->
+        <h1 id="logo">Investrloft</h1>
+
+        <br><br>
+        
+        <!--sign up bar-->
+        <div class="signbar">
+            <p class = "error">{{vm.error}}</p>
+
+            <!--signin form-->
+            <form autocomplete="on" class="target">
+                <input type="email" placeholder="Email" ng-model="vm.user.email"class=" text email" autocomplete="on">
+                <br>
+                <br>
+                <input type="password" placeholder="Password" ng-model="vm.user.password" class="text password">
+                <br>
+                <br>
+                <button class="submit" ng-click="vm.login()">Login</button>
+            </form>
+            <br>
+            <a class = "fg" href="/email">forgot password?</a>
+            <h3>or</h3>
+            <!--creat acount link if you dont have an accout-->
+            <a href="/whoami" class="newacc">Create account</a>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investrloft</title>
+    <link rel="stylesheet" href="./css/info.css">
+    <link rel="stylesheet" href="/node_modules/flickity/dist/flickity.min.css">
+    <script src="/node_modules/flickity/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="conatiner">
+
+        <!--div holding the name, location and type of user-->
+        <div class="info">
+
+            <!--name-->
+            <p class="name">{{vm.name}}</p>
+
+            <!--user type-->
+            <p class="type">{{vm.type}} 
+
+                <!--location-->
+                <i class="fa fa-map-marker lc" id="location">  {{vm.location}}</i>
+
+            </p>
+        </div>
+
+        <!--div holding the profile picture-->
+        <div class="pc"></div>
+
+        <br><br><br>
+        <!--div holding the bio-->
+        <div class="bio">
+
+            <!--bio-->
+            <h2 class="br">Biography</h2>
+            <p class="bio2">{{vm.bio}}</p>
+
+            <!--div holding industries-->
+            <div class="indus">
+
+                <!--industries-->
+                <h2 class="ind">Industry(ies)</h2>
+            </div>
+
+        </div>
+
+
+        <!--div holding the startups-->
+        <!--startup type-->
+        <h2 class="stype">{{vm.startup}}</h2>
+        <div class="strt">
+
+            <div class="products"></div>
+        </div>
+    </div>
+</body>
+
+</html>

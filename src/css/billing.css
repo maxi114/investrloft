@@ -1,0 +1,541 @@
+body{
+    margin: 0px;
+    border: 0px;
+    background-color: whitesmoke
+}
+.logo{
+    margin-top: 30px;
+    width: 130px;
+    margin-bottom: 30px;
+}
+
+.container{
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+.sub1{
+    width: 90%;
+}
+
+.description2{
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 18px;
+    color: rgb(107, 106, 106);
+}
+
+.subb1{
+    float: right;
+    font-weight: bolder;
+    line-height: 1.25;
+    font-size: 18px;
+    color: rgb(107, 106, 106);
+}
+
+.sub2{
+    width: 90%;
+}
+.description3{
+
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 18px;
+    color: rgb(107, 106, 106);
+}
+
+.card2{
+    float: right;
+    font-weight: bolder;
+    line-height: 1.25;
+    font-size: 18px;
+    color: rgb(107, 106, 106);
+}
+.sub33{
+    width: 90%;
+}
+.description4{
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 18px;
+    color: rgb(107, 106, 106);
+}
+.subb3{
+    float: right;
+    font-weight: bolder;
+    line-height: 1.25;
+    font-size: 18px;
+    color: rgb(107, 106, 106);
+    margin: 0px;
+}
+/*navigation*/
+.navigation{
+    border-bottom: 2px solid #bebdbd;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/*links*/
+.link{
+    outline: none;
+    text-decoration: none;
+    color: #999;
+    font-weight: 600;
+    margin: 0px 30px 0px 0px;
+}
+
+/*proflie link*/
+.Blink{
+    border-bottom: solid 2px #2f2fa2;
+    color: black;
+}
+
+/*billing link on hover*/
+
+.plink:hover{
+    cursor: pointer;
+    color: grey;
+    border-bottom: solid 2px grey;
+}
+.oops{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.oops1{
+    margin: 0px;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 20px;
+    color: rgb(107, 106, 106);
+}
+.billin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+p{
+    margin: 0px;
+    margin-left: 35px;
+    line-height: 1.45rem;
+    font-size: 1rem;
+}
+h2{
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin: 0;
+    margin-bottom: .5rem;
+    margin-left: 35px;
+    color: #444;
+}
+
+.tt{
+    text-align: center;
+    color: #2f2fa2;
+}
+.subscribe{
+    border: solid 2px #f1f1f1;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    display: none;
+}
+
+.sub1{
+    text-align: left;
+}
+
+.plan{
+    border: solid 2px #2f2fa2;
+    border-radius: 5px;
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+}
+.p1{
+    margin: 10px;
+}
+.p2{
+    color: #676767;
+    font-size: 19px;
+}
+.p3{
+    font-size: 25px;
+    color: #2f2fa2;
+}
+.p4{
+    color: #676767;
+    font-size: 19px;
+}
+.subscription-form{
+    border: solid 2px #f1f1f1;
+    border-radius: 5px;
+    display: inline-block;
+}
+.pp{
+    text-align: left;
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.pp2{
+    color: #676767;
+    font-size: 15px;
+    margin: 0px;
+    margin-left: 30px;
+}
+#card-errors{
+    color: #fa755a;
+}
+.submit{
+    color: white;
+    background-color: #2f2fa2;
+    border: none;
+    width: 100px;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+/*payment method div*/
+.payment_methods{
+    border: solid 2px #f1f1f1;
+    border-radius: 5px;
+    background-color: white;
+    text-align: left;
+}
+
+/*payment method 2 div*/
+.payment_methods2{
+    border: solid 2px #f1f1f1;
+    margin: 35px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.subb2{
+    display: inline-block;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.spin{
+    display: none;
+}
+
+.popp{
+    margin: 0px;
+}
+.pop-up{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+}
+.pop-up1{
+    width: 500px;
+    padding: 5px;
+    position: relative;
+    background-color: white;
+    color: #676767;
+    border-radius: 10px;
+}
+
+/*div holdint the card information*/
+.card_info{
+    border: solid 1px #f1f1f1;
+    margin: 35px;
+    width: 500px;
+}
+
+/*p element with the card info*/
+.card2{
+    font-weight: 600;
+    line-height: 1.45rem;
+    font-size: 1rem;
+    color: rgb(103, 103, 103);
+    text-transform: capitalize;
+    margin: 0px;
+    margin-left: 20px;
+}
+
+/*p holding the cards expiration date*/
+.expdates{
+    margin: 0px;
+    color: #999;
+    margin-left: 20px;
+}
+
+/*add card button*/
+.Updatecard{
+    font-weight: bolder;
+    line-height: 1.25;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+#cancel{
+    font-weight: bolder;
+    line-height: 1.25;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.billing_history{
+    text-align: left;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0px;
+  }
+
+/*div holding the header for the dradt*/
+.draft1{
+    max-width: 900px;
+    margin: auto;
+    background-color: whitesmoke;
+}
+.tbody{
+    height: 10px;
+    overflow: auto;
+}
+/* draft titles*/
+.jki{
+    width: 300px;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 19px;
+    margin: 10px;
+    background-color: #ececec;
+    color: black;
+    padding: 5px 0px 5px 10px;
+    border-top: solid .5px;
+    text-align: left;
+}
+.jki2{
+    text-align: left;
+    padding: 10px 0px 10px 10px;
+    border-top: solid .5px grey;
+    background-color: white;
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: 18px;
+    color: black;
+}
+
+.date{
+    border-left:solid .5px;
+    border-top-left-radius: 5px;
+}
+
+.cardUpdate{
+    display: none;
+    margin: 35px;
+    border: solid 1px #f1f1f1;
+}
+.StripeElement {
+    box-sizing: border-box;
+  
+    height: 40px;
+  
+    padding: 10px 12px;
+  
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: white;
+  
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+  
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+  
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+  
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
+  #card-element{
+      max-width: 350px;
+      margin: auto;
+      margin-bottom: 10px;
+  }
+  /*card holders name input txt*/
+.inp2{
+    box-sizing: border-box;
+  
+    height: 40px;
+  
+    padding: 10px 12px;
+  
+    border: 1px solid black;
+    width: 350px;
+    border-radius: 4px;
+    background-color: white;
+    outline: none;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.SaveCard{
+    float: right;
+    margin-top: 30px;
+    width: 150px;
+    font-size: 18px;
+    background-color: #2f2fa2;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    border: none;
+    cursor: pointer;
+    margin-right: 30px;
+    outline: none;
+}
+.SaveCard:hover{
+    background-color: blue;
+}
+.card-errors{
+    text-align: center;
+    color: red;
+}
+.saved{
+    color: white;
+    font-size: 25px;
+    display: none;
+}
+/*loadin circle pop-up*/
+.verify{
+    width: 100%;;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+}
+.verify2{
+    text-align: center;
+    width: max-content;
+    position: relative;
+    background-color: transparent;
+    border-radius: 10px;
+}
+.loader{
+    margin: 50px;
+    margin-bottom: 20px;
+    display: none;
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid blue; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .BillingReceit{
+    width: 100%;;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+}
+.BillingReceit2{
+    text-align: center;
+    width: max-content;
+    height: max-content;
+    position: relative;
+    background-color: white;
+}
+
+.popsub{
+    width: 100%;;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+}
+.popsub2{
+    text-align: center;
+    max-width: 500px;
+    height: max-content;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+}
+.poppp2{
+    margin: 10px;
+}
+.poppp{
+    margin: 10px;
+}
+.yess2{
+    font-size: 20px;
+    padding: 5px;
+    width: 80px;
+    margin-right: 5px;
+    color: red;
+    border: solid 1px red;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.noo2{
+    font-size: 20px;
+    padding: 5px;
+    width: 80px;
+    margin-left: 5px;
+    color: green;
+    background-color: white;
+    border: solid 1px green;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media screen and (max-width: 750px){
+    .plink{
+        margin-left: 20px;
+    }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="css/startuprgt.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEosJpwPi93NGAXxn0y3mHBZHEkFr9zd4&libraries=places&callback=initialize"></script>
+
+    <title>Investrloft</title>
+</head>
+
+<body>
+    <script>
+        var searchInput = 'search_input';
+
+        function initialize() {
+            var autocomplete;
+            autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+                types: ['geocode'],
+            });
+
+            google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                var near_place = autocomplete.getPlace();
+
+                //loop through the address componenets
+                for (var i = 0; i < near_place.address_components.length; i++) {
+
+                    //if the type is state
+                    if (near_place.address_components[i].types[0] == "administrative_area_level_1") {
+                        document.getElementById('state').value = near_place.address_components[i].short_name;
+                    }
+
+                    //if the type is country
+                    if (near_place.address_components[i].types[0] == "country") {
+                        document.getElementById('country').value = near_place.address_components[i].short_name;
+                    }
+                }
+                document.getElementById('loc_lat').value = near_place.geometry.location.lat();
+                document.getElementById('loc_long').value = near_place.geometry.location.lng();
+                document.getElementById('city').value = near_place.vicinity;
+
+
+            });
+        }
+        $(document).on('change', '#' + searchInput, function () {
+            document.getElementById('latitude_input').value = '';
+            document.getElementById('longitude_input').value = '';
+
+            document.getElementById('latitude_view').innerHTML = '';
+            document.getElementById('longitude_view').innerHTML = '';
+        });
+
+
+    </script>
+
+    <div class="hold">
+        <!--container on the left-->
+        <div class="container2">
+            <div class="ct2">
+                <h1 class = "c2">Start Investing!</h1>
+                <p class = "c22">Fill out the form on the right and start investing today.</p>
+            </div>
+        </div>
+
+        <!--container on the right-->
+        <div class="container1">
+
+            <h2 class="sr">Investor registration</h2>
+
+            <!--new account bar-->
+            <div class="signupbar">
+                <!--signup form-->
+                <form class="form">
+
+                    <p class="error">{{vm.error}}</p>
+
+                    <span>Name*</span>
+                    <br>
+                    <!--fistr name-->
+                    <input type="text" name="First Name" autocomplete="given-name" placeholder="Fisrt Name"
+                        ng-model="vm.investor.FirstName" id="text" required>
+
+                    <!--last name-->
+                    <input type="text" name="Last Name" placeholder="Last Name" ng-model="vm.investor.LastName"
+                        id="text" required>
+
+                    <br><br>
+                    <span>Email*</span>
+                    <input type="email" name="email" placeholder="Email" ng-model="vm.investor.email" id="text"
+                        required>
+                    <p>Email must be a valid address, e.g. me@mydomain.com</p>
+
+                    <span>Bio*</span>
+                    <!--biography-->
+                    <p class="show">Let startups know what your expertise are and what industry(ies) you specialize
+                        in.</p>
+                    <textarea ng-model="vm.investor.bio" class="bio" required cols="40" rows="10"></textarea>
+
+
+                    <span>Investor type*</span>
+                    <p class = "show">What type of investor are you?</p>
+                    <input type="text" id = "text" placeholder="eg. Angel, Startup accelerator, home offices, venture capitol" ng-model = "vm.investor.type" required>
+
+                    <span>Industry</span>
+                    <p class="show">what industry(ies) are you looking to invest in? (select all that apply)</p>
+                    <div class="industry">
+                    </div>
+
+                    <span>Budget</span>
+                    <p class="show">What is your investment budget per startup in USD?</p>
+                    <input type="number" id="text" placeholder="$200,000" ng-model="vm.investor.budget">
+
+                    <span>Address City & State*</span>
+                    <!--city-->
+                    <p class="show">To provide you with startups closest to you.</p>
+                    <!-- Autocomplete location search input -->
+                    <div class="form-group">
+                        <input type="text" name="customname" placeholder="Type City & State.." class="form-control"
+                            id="search_input" autocomplete="off" required />
+                        <input type="hidden" id="loc_lat" />
+                        <input type="hidden" id="loc_long" />
+                        <input type="hidden" id="city" />
+                        <input type="hidden" id="state" />
+                        <input type="hidden" id="country" />
+                    </div>
+
+                    <span>Password*</span>
+                    <input type="password" name="password" placeholder="Password" ng-model="vm.investor.password"
+                        id="text" required>
+                    <p>Password must be 8-20 Characters (@,- and_ are also allowed)</p>
+
+                    <!-- <input type="text" placeholder="confirm password" ng-model="vm.user.confirmPassword" id="text">
+                <p>Passwords must match</p>-->
+                    <br><br>
+                    <input ng-click="vm.agree()" type="checkbox" ng-model='vm.checked' class = "check">
+                    <a href="/termsofservice" class="checkbox">I agree to the Terms Of Service and privacy policy
+                    </a>
+                    <br>
+                    <br>
+                    <input ng-click="vm.agree()" type="checkbox" ng-model='vm.checked2'>
+                    <a class="checkbox">I confirm to be an accredited investor
+                    </a>
+                    <br>
+                    <p class="error">{{vm.error}}</p>
+                    <br><br>
+                    <button class="submit" ng-click="vm.register()">Register</button>
+
+                    <!--signin link-->
+                    <br><br>
+                    <a href="/login" class="redirect">already have an account? signin</a>
+                    <br><br>
+                </form>
+
+
+                <!--announcement bar-->
+                <div class="pop-up">
+                    <div class="pop-up1">
+                        <h1>verify your email</h1>
+                        <h3>A verification link has been sent to your email. Please wait for at least five minutes to
+                            recieve the
+                            email then you may login</h3>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./js/register.js"></script>
+
+    <br><br>
+</body>
+
+</html>

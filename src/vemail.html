@@ -1,0 +1,37 @@
+<!--this page is borrowing its css from login.css-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/vemail.css">
+    <link rel="stylesheet" href="css/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/vemail.js"></script>
+    <title>Investrloft</title>
+</head>
+
+<body>
+    <div class="conatiner1">
+        <!--announcement bar-->
+        <div id="announcement">
+            <P class = 'verify'>{{vm.message}}</P>  
+        </div>
+            <p class = "error">{{vm.error}}</p>
+
+        <!--logo if you click it it takes you back to home-->
+        <div id="logo">
+            <a href="/"> <img class="logo1" src="./logo/blue.png" alt="Logo">
+            </a>
+        </div>
+         
+        <!--div to hold the login button-->
+        <div class="button"></div>
+
+    </div>
+
+</body>
+
+</html>
