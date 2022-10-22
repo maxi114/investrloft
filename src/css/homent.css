@@ -205,7 +205,7 @@ body{
 /*div holding the links*/
 .links1{
    position: absolute;
-   width: 340px;
+   width: 450px;
    height: 19px;
    top: 50%;
    left: 50%;
@@ -930,7 +930,7 @@ a{
 }
 
 /*navigation bar*/
-@media screen and (max-width: 850px){
+@media screen and (max-width: 950px){
 
 
     /*hide the links*/

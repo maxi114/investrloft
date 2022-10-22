@@ -2,8 +2,12 @@ const express = require('express');
 const router = express.Router({ caseSensitive: true });
 const Product = require('../models/product.js');
 const Investor = require('../models/investor');
+const Resource = require("../models/resources.js");
 const nodemailer = require('nodemailer');
+const multer = require('multer');
+const gridFsStorage = require('multer-gridfs-storage');
 const mongoose = require('mongoose');
+const crypto = require('crypto');
 const grid = require("gridfs-stream");
 const Msg = require("../models/message");
 const fs = require("file-system");
@@ -15,6 +19,7 @@ const MailMessage = require('nodemailer/lib/mailer/mail-message');
 const { createSecretKey } = require('crypto');
 const { Server } = require('http');
 const dotenv = require('dotenv');//store the secret
+const { LongWithoutOverridesClass } = require('bson');
 
 //load in secret variable
 dotenv.config({ vaerbose: true });
@@ -26,6 +31,165 @@ var transporter = nodemailer.createTransport({
         pass: process.env.Gmailpwd,
     }
 });
+
+
+//db connection string
+const db = "mongodb://db:27017/investrloft"
+
+var conn = mongoose.connection;
+
+var gfs;
+
+conn.once('open', function () {
+    console.log('-connection open to database- api');
+
+    // intialize stream
+    gfs = grid(mongoose.connection.db, mongoose.mongo)
+
+    gfs.collection('Logo');//collection name
+
+})
+
+
+//route to receive all the resources
+router.post("/resource2", ((req, res) => {
+
+    Resource.find()
+
+        .then(data => {
+
+            //if there is data
+            if (data.length > 0) {
+
+                
+
+
+
+
+                gfs.files.find({ 'metadata.type': "logo", }).toArray((err, file) => {
+
+                    //var to track the loop
+                    var lop = 0;
+
+                    //var to store the arrays
+                    const dat = {
+                        logo: [],
+                        resource: [],
+                    }
+
+                    //push the images & resources in to the array
+                    dat.logo.push(file)
+                    dat.resource.push(data)
+
+                    //loop through the files
+                    for (var f = 0; f < file.length; f++) {
+
+
+                        var type = file[f].contentType.split("/")
+                        type = type[1];
+
+                        //write the images to a writeto folder
+                        var writestream = fs.createWriteStream(path.join(__dirname, '../src/logo2/' + file[f]._id + "." + type));
+
+                        //read the files
+                        var read = gfs.createReadStream({ _id: file[f]._id })
+
+                        read.pipe(writestream);
+                        writestream.on('close', function () {
+                            lop += 1
+                            if(lop == file.length){
+                                res.send(dat)
+                            }
+                        })
+
+                        
+                    }
+
+
+                })
+
+
+            }
+
+            //if there is no data
+            else {
+                res.send("no resources")
+            }
+
+        })
+
+}))
+
+//set storage engine
+const storage = new gridFsStorage({
+
+    url: db,
+    options: { useUnifiedTopology: true },
+    file: (req, file) => {
+
+        return new Promise((resolve, reject) => {
+
+
+
+            crypto.randomBytes(16, (err, buf) => {
+                if (err) {
+                    return reject(err);
+                }
+
+                const filename = buf.toString('hex') + path.extname(file.originalname);
+                const fileInfo = {
+                    filename: filename,
+                    bucketName: "Logo",
+                    metadata: {
+                        type: 'logo',
+                        Name: file.fieldname,
+                    }
+                };
+                resolve(fileInfo);
+
+            });
+
+        });
+    }
+});
+
+//upload
+const upload = multer({ storage });
+
+//route to store the resources
+router.post("/resources", upload.any(), ((req, res) => {
+
+
+    //before pushing the resource to database check to see if it already exists
+    Resource.findOne({ Name: req.body.name }, (err, data) => {
+
+        //if the resource already exists send back a message
+        if (data) {
+            res.send("Resource already exists")
+        }
+
+        //if the resource does not exist save to the database
+        else {
+            var resource = new Resource();
+
+            //save the data to the databse
+            resource.Name = req.body.name
+            resource.Link = req.body.link
+            resource.Description = req.body.description
+            resource.Live = req.body.live
+
+            //save the databse
+            resource.save(function (err, document) {
+
+                //send back a message
+                res.send("resource is saved")
+            })
+        }
+    })
+
+}))
+
+
 
 //route to aprrove or unapprove startups
 router.post("/approve", ((req, res) => {
@@ -56,7 +220,7 @@ router.post("/approve", ((req, res) => {
                     };
 
                     transporter.sendMail(mailOptions, function (error, info) {
-                     });
+                    });
 
                     res.send("sent")
                 }

@@ -1,8 +1,20 @@
+
 (function () {
     const app = angular.module('app').controller('Ctrl2', ['ngRoute', 'angular-jwt']);
 
     app.config(function ($routeProvider, $locationProvider) {
         $locationProvider.html5Mode(true);
+
+        //resource page
+        $routeProvider.when("/administrator/101/resources", {
+            templateUrl: "../Administrator/resources.html",
+            controller: "resourceController",
+            controllerAs: "vm",
+            access: {
+                restricted: false,
+                //account: "investor",
+            }
+        })
 
         //amdministrator page
         $routeProvider.when("/administrator/101/industry", {
@@ -39,6 +51,282 @@
 
     });
 
+    //resource controller
+    app.controller('resourceController', resourceController);
+
+    function resourceController($location, $scope, $window, $http, jwtHelper) {
+
+        var vm = this
+
+        var myFiles2 = [];
+        var myFiles = [];
+
+        //route to get all the resources from the databse
+        $http.post("admin/resource2", {
+            Name: "this route is to receive all the resources"
+        })
+            .then((res) => {
+
+
+                //var to store the resource
+                var resource = res.data.resource[0]
+
+                //var to store the logo
+                var logo = res.data.logo[0]
+
+                //loop through all the resources
+                for (var i = 0; i < resource.length; i++) {
+
+                    //loop through the logo
+                    for (var l = 0; l < logo.length; l++) {
+
+                        //check to see if the logo matches the resource
+                        if (logo[l].metadata.Name == resource[i].Name) {
+
+                            console.log(resource[i])
+                            var type = logo[l].contentType.split("/")
+                            type = type[1];
+                            var url = '../logo2/' + logo[l]._id + "." + type;
+
+                            $("<div class = \"resource\">" +
+                                "<div class = \"profile\">" +
+                                "<div class = \"loggo\">" +
+                                "<img class = \"hgo\" src=" + url + " > " + 
+                                "</div>" +
+                                "</div>" +
+                                "<div class = \"leftsection\">" +
+                                "<h1 class = \"name\">" + resource[i].Name + "</h1>" +
+                                "<a href = " + resource[i].Link + " target=\"_blank\" >Visit " + resource[i].Name + " here </a>" +
+                                "<p class = \"description\">" + resource[i].Description + "</p>" +
+                                "</div>" +
+                                "</div>").appendTo(".inal1")
+                        }
+                    }
+                }
+
+            })
+
+        //when select valuechanges
+        $("#opt").change(function () {
+
+            //if value is startups
+            if ($("#opt").val() == "Startups") {
+
+                location.href = "/administrator/101/startup"
+            }
+
+            //if value is Investors
+            if ($("#opt").val() == "Investors") {
+
+                location.href = "/administrator/101/investor"
+
+            }
+
+            //if value is Industries
+            if ($("#opt").val() == "Industries") {
+
+                location.href = "/administrator/101/industry"
+
+            }
+
+            //if value is resources
+            if ($("#opt").val() == "resources") {
+
+                location.href = "/administrator/101/resources"
+
+            }
+        })
+
+        $("#spin3").hide();
+
+        //preview pictures before uploading
+        if (window.File && window.FileList && window.FileReader) {
+
+            $("#file").on("change", function (e) {
+
+                //remove the previous file
+                $(".prof").remove();
+
+                if (myFiles.length > 0) {
+                    myFiles = [];
+                    $(".prof").remove();
+
+                }
+                if (myFiles2.length > 0) {
+                    myFiles2 = [];
+                    $(".prof").remove();
+                }
+                var files = e.target.files
+
+
+                if (files[0].type.includes("image")) {
+
+                    //remove the txt element inside the div
+                    $('.divprof').contents().filter(function () {
+                        return this.nodeType === 3;
+                    }).remove();
+
+                    myFiles.push(files[0]);
+                }
+                else {
+                    //alert
+                    alert("Upload only images or vidoes")
+                }
+
+                var fileReader = new FileReader();
+                fileReader.onload = (function (e) {
+
+                    //image file
+                    document.querySelector(".divprof").style.backgroundImage = 'url(' + e.target.result + ')';
+
+                });
+                fileReader.readAsDataURL(files[0]);
+
+            });
+        } else {
+            alert("Your browser doesn't support to File API")
+        }
+
+        //when user clicks add 
+        $(".adbtn").click(function () {
+
+            $(".error1").html("")
+
+            //get the resource name
+            var name = $(".title").val()
+            name = name.toLowerCase();
+
+            //get the resource link
+            var link = $(".subtitle").val()
+
+            //get the resource desctiption
+            var description = $(".description").val()
+
+            //store if the resource is live or not
+            var live;
+
+            //if there is no resource name
+            if (!name) {
+                $(".error1").html("please enter the name of the resource.")
+                return;
+            }
+
+
+            //if there is no resource link
+            if (!link) {
+                $(".error1").html("please enter the link to the resource.")
+                return;
+            }
+
+            //regex function to verify that the link is valid
+            const isValidUrl = urlString => {
+                var urlPattern = new RegExp('^(https?:\\/\\/)?' + // validate protocol
+                    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // validate domain name
+                    '((\\d{1,3}\\.){3}\\d{1,3}))' + // validate OR ip (v4) address
+                    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // validate port and path
+                    '(\\?[;&a-z\\d%_.~+=-]*)?' + // validate query string
+                    '(\\#[-a-z\\d_]*)?$', 'i'); // validate fragment locator
+                return !!urlPattern.test(urlString);
+            }
+
+            //check if the link is valid
+            if (isValidUrl(link) == false) {
+                $(".error1").html("please enter a valid link to the resource.")
+                return;
+            }
+
+            //if there is no resource description
+            if (!description) {
+                $(".error1").html("please enter the resources description.")
+                return;
+            }
+
+            //check if the resource is live or not
+            if (vm.checked) {
+                live = true
+            }
+            else {
+                live = false
+            }
+
+
+            //var to store the resource 
+            var resourc = {
+                name: name,
+                link: link,
+                live: live,
+                description: description,
+            }
+
+            //check if there is a logo uploaded
+            if (myFiles.length == 0) {
+                $(".error1").html("please uploade an image / logo for the resource.")
+                return;
+
+            }
+
+            //format the logo image
+            var fd = new FormData();
+
+            for (key in resourc) {
+                fd.append(key, resourc[key]);
+            }
+
+            fd.append(name, myFiles[0]);
+
+
+
+            $(".cp").html("")
+            $("#spin3").show();
+
+
+            //send to the information to the server side 
+            $http.post("admin/resources", fd, {
+                transformRequest: angular.identity,
+                headers: { 'Content-Type': undefined },
+            })
+                .then((res) => {
+
+                    //if the data is succesfully saved
+                    if (res.data == "resource is saved") {
+                        $("#spin3").hide();
+                        $(".cp").html("Success!!")
+                        $(".adbtn").css({ 'background-color': 'green', 'color': 'white' });
+
+
+                        //timeout funtion to delay the refresh of the page
+                        setTimeout(doSomething, 2000);
+
+                        function doSomething() {
+                            //reload the page
+                            window.location.reload();
+                        }
+
+                    }
+
+                    //if the data is not saved
+                    if (res.data == "Resource already exists") {
+                        $("#spin3").hide();
+                        $(".cp").html("Resource already exists")
+                        $(".adbtn").css({ 'background-color': 'red', 'color': 'white' });
+                        $(".error1").html("The resource you are trying to upload already exists.")
+
+                        //timeout funtion to change te add button back
+                        setTimeout(doSomething, 2000);
+
+                        function doSomething() {
+                            //reload the page
+                            $(".cp").html("Add")
+                            $(".adbtn").css({ 'background-color': '#3F3FA0', 'color': 'white' });
+                        }
+                    }
+
+                })
+
+        })
+
+
+    }
 
     //startups controller
     app.controller('startupController', startupController);
@@ -67,6 +355,13 @@
             if ($("#opt").val() == "Industries") {
 
                 location.href = "/administrator/101/industry"
+
+            }
+
+            //if value is resources
+            if ($("#opt").val() == "resources") {
+
+                location.href = "/administrator/101/resources"
 
             }
         })
@@ -360,7 +655,7 @@
             dat: "approved"
         })
             .then((response) => {
-                strt(response,".home1")
+                strt(response, ".home1")
             })
 
 
@@ -369,7 +664,7 @@
             dat: "disapproved"
         })
             .then((response) => {
-                strt(response,".disapproved")
+                strt(response, ".disapproved")
             })
 
     }
@@ -402,6 +697,13 @@
             if ($("#opt").val() == "Industries") {
 
                 location.href = "/administrator/101/industry"
+
+            }
+
+            //if value is resources
+            if ($("#opt").val() == "resources") {
+
+                location.href = "/administrator/101/resources"
 
             }
         })
@@ -919,6 +1221,13 @@
             if ($("#opt").val() == "Industries") {
 
                 location.href = "/administrator/101/industry"
+
+            }
+
+            //if value is resources
+            if ($("#opt").val() == "resources") {
+
+                location.href = "/administrator/101/resources"
 
             }
         })

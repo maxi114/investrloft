@@ -204,8 +204,41 @@
                 restricted: false
             }
         })
+
+        //resources controller
+        $routeProvider.when('/resource', {
+            templateUrl: '../resource2.html',
+            controller: 'ResourceController',
+            controllerAs: "vm",
+            access: {
+                restricted: false
+            }
+        })
+
     });
 
+
+    //resource controller
+    app.controller('ResourceController', ResourceController);
+
+    function ResourceController($location, $scope, $window, $http, jwtHelper) {
+
+        var vm = this
+
+        //route to get the resources
+        $http.post("admin/resource2", {
+            Name: "this route is for getting all the resources"
+        })
+        .then((res)=>{
+
+            //variable to store the data received from the router
+            var data = res.data
+
+            console.log(data)
+
+        })
+
+    }
 
     //home investor controller
     app.controller('HomeController', HomeController);

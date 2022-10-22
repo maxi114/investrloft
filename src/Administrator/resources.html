@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--link for the notification bell icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="css/industry.css">
+    <link rel="stylesheet" href="css/resource.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investrloft</title>
+</head>
+
+<body>
+
+    <!--div holding the whole page-->
+    <div class="container1">
+
+        <!--div holding the navigation-->
+        <div class="nav">
+
+            <!--logo-->
+            <div id="logo">
+                <a href="/"> <img class="logo" src="../logo/white.png" alt="Logo">
+                </a>
+            </div>
+
+            <!--profile-->
+            <div class="divdrop11">
+                <!--profile picture-->
+                <div class="logo2">
+                    <img class="prof" src="./profile/profile2.jpg" alt="" srcset="">
+                </div>
+            </div>
+
+            <!--div drop down for accounts-->
+            <div class="divdropnav">
+                <p class="vmail">{{vm.email}}</p>
+                <hr>
+                <p class="vcount">Account</p>
+                <p class="vlogout vcount">Logout</p>
+            </div>
+
+
+            <select name="" id="opt">
+                <option class="res" value="resources">Resources</option>
+                <option class="invds" value="Industries">Industries</option>
+                <option class="start" value="Startups">Startups</option>
+                <option class="invst" value="Investors">Investors</option>
+            </select>
+
+        </div>
+        <!--Resources-->
+        <div class="industry">
+
+            <!--add resource-->
+            <div class="add ">
+
+                <h1 class="tt">Add Resources</h1>
+
+                <div class="add1">
+                    <p class="error1" style="color: red;"></p>
+                    <input type="text" class="title ti" placeholder="Product Name">
+
+                    <input type="url" class="subtitle ti" placeholder="Product link">
+                    <input type="checkbox" ng-model="vm.checked" name="live" id="check">
+                    <span>Live</span>
+                    <br><br>
+
+                    <p>Product description</p>
+                    <textarea class="description" name="" id="" cols="80" rows="10"></textarea>
+
+                    <br><br>
+
+                    <p>Upload a picture for the resource</p>
+                    <!--profile picture-->
+                    <div class="pics">
+                    <div class="divprof ed">
+                    </div>
+
+                    <div class="upload-btn-wrapper">
+                        <button class="btn">Upload Logo/image</button>
+                        <input type="file" id="file" name="myfile" accept='image/*' />
+                    </div>
+                    </div>
+                    <br>
+
+                    <p>What industry is it in?</p>
+                    <button class="adbtn">
+                        <p class="cp">Add</p>
+                        <i class="ta fa fa-circle-o-notch fa-spin" id="spin3"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+            
+
+            <!--display all the industries-->
+            <div class="inall">
+
+                <h1 class="tt">Display all resources</h1>
+                <div class="inal1"></div>
+            </div>
+
+            <!--existing industries-->
+            <div class="existing"></div>
+        </div>
+
+        <!--pop out bar-->
+        <div class="pop-up">
+            <div class="pop-up1">
+                <h3>Are you sure you want to delete this industry?</h3>
+                <button class="btnpop yes">Yes</button>
+                <button class="btnpop no">No</button>
+                <br>
+            </div>
+        </div>
+        <br><br><br><br><br>
+</body>
+
+</html>
