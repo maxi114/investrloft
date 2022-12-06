@@ -233,7 +233,7 @@ router.post("/contactus", ((req, res)=>{
     //compose the email
     var mailOptions = {
         from: req.body.email,
-        to: "support@investrloft.com",
+        to: "investrloft@gmail.com",
         subject: "Message from " + req.body.name + " Email: " + req.body.email ,
         text: req.body.message
     };
@@ -658,7 +658,7 @@ router.post('/reset', (request, response) => {
                     "<img class=\"logo\" style = \" width: 50px; height: 50px;\" src=\"../src/logo/favicon.ico\" alt=\"Logo\">" +
                     '<h1 style = \"color: black;\" > Password change request </h1> ' +
                     '<p style = \"color: black;\"> you are receiving this because you (or someone else) have requested for a password change. if you did not request for a password change please ignore this email </P>' +
-                    '<h4> click <a href="http://localhost:8080/reset/' + token + '">here to change your password</a></h4>' +
+                    '<h4> click <a href="localhost:8080/reset/' + token + '">here to change your password</a></h4>' +
                     "</div>",
             };
 

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,37 @@
 
     <div class="containerr">
 
+
+        <!--contact us form-->
+        <div class="cont1">
+            <div class="contact-form">
+                <h1>Contact Us</h1>
+
+                <button class="close">X</button>
+                <div class="txtb">
+                    <label for="">Name :</label>
+                    <input type="text" ng-model="vm.contact.name" placeholder="Enter Your Name">
+                </div>
+
+                <div class="txtb">
+                    <label for="">Email :</label>
+                    <input type="Email" ng-model="vm.contact.email" placeholder="Enter Your Email">
+                </div>
+
+                <div class="txtb">
+                    <label for="">Message :</label>
+                    <textarea name="" id="" ng-model="vm.contact.message" cols="30" rows="10"></textarea>
+                </div>
+
+                <p class="error">{{vm.error}}</p>
+
+                <div class="btn">
+                    <button class="btn1">Send </button>
+                    <i class="fa fa-circle-o-notch fa-spin" id="spin3"></i>
+                </div>
+            </div>
+        </div>
+
         <!--div holding the navigation bar-->
         <nav class="nav">
 
@@ -26,7 +58,7 @@
 
                 <a class="linkk nv nvl1" href="/homeinv">Investors</a>
 
-                <a class = "linkk nv nvl4" href="/homent">Startups</a>
+                <a class="linkk nv nvl4" href="/homent">Startups</a>
 
                 <a class="linkk nv nvl">Contact Us</a>
 
@@ -54,20 +86,22 @@
 
         </nav>
 
-      
+
 
         <!----------------start coding from her------------------------------------>
 
         <br><br>
         <div class="resources">
 
-            
+
         </div>
-      <br><br>
+        <br><br>
+
+        <script src="./js/home.js"></script>
 
     </div>
 
     <br><br><br><br>
 </body>
 
-</html> 
+</html>

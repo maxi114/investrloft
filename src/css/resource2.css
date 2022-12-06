@@ -77,3 +77,101 @@ h1{
       font-size: 16px;
       color: #484848;
     }
+
+    /*contact us form*/
+.cont1{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  display: none;
+  overflow: hidden;
+  position: fixed;
+}
+.contact-form{
+  max-width: 600px;
+  background-color: white;
+  z-index: 5;
+  padding: 30px 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.close{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  right: 10px;
+  top: 10px;
+  border-color: #CBCBFF;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.contact-form h1{
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  color: #3f3fa0;
+  margin-top: 10px;
+}
+
+.txtb{
+  border: 1px solid #CBCBFF;
+  margin: 8px 0;
+  padding: 12px 18px;
+  border-radius: 5px;
+}
+
+.txtb label{
+  display: block;
+  text-align: left;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.txtb input, .txtb textarea{
+  width: 100%;
+  border: none;
+  background-color: none;
+  outline: none;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.btn{
+  display: block;
+  background-color: #3f3fa0;
+  padding: 14px 0px;
+  color: white;
+  cursor: pointer;
+  margin-top: 8px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.btn1{
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.error{
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: red;
+}

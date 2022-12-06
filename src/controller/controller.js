@@ -225,6 +225,65 @@
 
         var vm = this
 
+        $("#spin3").hide();
+        $("#spin4").hide();
+
+           //when user clicks send button on the contact
+           $(".btn").click(function () {
+
+            //check to see if the information is all enterd
+            if (!vm.contact) {
+                $(".error").html("Please fill out the information above.")
+                return
+            }
+
+            if (!vm.contact.name) {
+                $(".error").html("What is your name?")
+                return
+            }
+
+            if (!vm.contact.email) {
+                $(".error").html("Enter your email above, its a way of getting back to you")
+                return
+            }
+
+            if (!vm.contact.message) {
+                $(".error").html("Type your message above (how can we help you)")
+                return
+            }
+
+            $(".error").html("")
+            $(".btn1").hide()
+            document.getElementById("spin3").style.display = "block"
+
+
+            $http.post("/api/contactus", vm.contact)
+                .then((res) => {
+
+                    if (res.data == "sent") {
+                        $("#spin3").hide();
+                        $(".btn").html("Message sent")
+
+                        setTimeout(() => {
+                            $(".contact-form").hide();
+                            location.href = "/resource"
+                        }, 1000)
+
+                    }
+
+                    else {
+                        $(".error").html("An error occured, try again shortly!")
+
+                        setTimeout(() => {
+                            $(".contact-form").hide();
+                            location.href = "/resource"
+                        }, 3000)
+                    }
+
+
+                })
+        })
+
         //route to get the resources
         $http.post("admin/resource2", {
             Name: "this route is for getting all the resources"
@@ -275,6 +334,65 @@
     function HomeController($location, $scope, $window, $http, jwtHelper) {
 
         var vm = this
+
+        $("#spin3").hide();
+        $("#spin4").hide();
+
+                //when user clicks send button on the contact
+                $(".btn").click(function () {
+
+                    //check to see if the information is all enterd
+                    if (!vm.contact) {
+                        $(".error").html("Please fill out the information above.")
+                        return
+                    }
+        
+                    if (!vm.contact.name) {
+                        $(".error").html("What is your name?")
+                        return
+                    }
+        
+                    if (!vm.contact.email) {
+                        $(".error").html("Enter your email above, its a way of getting back to you")
+                        return
+                    }
+        
+                    if (!vm.contact.message) {
+                        $(".error").html("Type your message above (how can we help you)")
+                        return
+                    }
+        
+                    $(".error").html("")
+                    $(".btn1").hide()
+                    document.getElementById("spin3").style.display = "block"
+        
+        
+                    $http.post("/api/contactus", vm.contact)
+                        .then((res) => {
+        
+                            if (res.data == "sent") {
+                                $("#spin3").hide();
+                                $(".btn").html("Message sent")
+        
+                                setTimeout(() => {
+                                    $(".contact-form").hide();
+                                    location.href = "/"
+                                }, 1000)
+        
+                            }
+        
+                            else {
+                                $(".error").html("An error occured, try again shortly!")
+        
+                                setTimeout(() => {
+                                    $(".contact-form").hide();
+                                    location.href = "/"
+                                }, 3000)
+                            }
+        
+        
+                        })
+                })
 
     }
 
