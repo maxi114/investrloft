@@ -20,6 +20,14 @@ const ResourcesSchema = new Schema({
         type: Boolean
     },
 
+    TitleIndustry:{
+        type: String
+    },
+
+    SubIndustry:{
+        type: String
+    },
+
 });
 
 const Model = mongoose.model('Resource', ResourcesSchema);

@@ -118,3 +118,129 @@ padding: 10px;
   font-size: 16px;
   color: #484848;
 }
+
+/*Drop down button*/
+.dropbtn {
+  background-color: #2f2fa2;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0px 20px 0px 20px;
+ }
+ 
+ /* The container <div> - needed to position the dropdown content */
+ .dropdown {
+  position: relative;
+  display: inline-block;
+ }
+ 
+ /* Dropdown Content (Hidden by Default) */
+ .dropdown-content {
+  display: none;
+  position: relative;
+  background-color: white;
+  width: 300px;
+  max-height: 220px;
+  overflow: auto;
+  margin: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: left;
+  flex-flow: row wrap;
+  justify-content: center;
+ }
+ 
+ .intx{
+     padding: 5px;
+     border: solid 1px rgb(180, 178, 178);
+     font-size: 15px;
+     border-radius: 10px;
+     outline: none;
+ }
+ .inbtn{
+     color: white;
+     padding: 5px 10px 5px 10px;
+     background-color: black;
+     font-size: 20px;
+     border: none;
+     border-radius: 10px;
+ }
+ #otherdiv{
+     text-align: center;
+     width: 100%;
+ }
+
+ .h3{
+     margin: 0px;
+     padding: 0px;
+     margin-top: 20px;
+     margin-bottom: 5px;
+     font-weight: normal;
+     line-height: 1.25;
+     font-size: 20px;
+     color: rgb(107, 106, 106);
+ }
+ /* Links inside the dropdown */
+ .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+ }
+ 
+ /* Change color of dropdown links on hover */
+ .dropdown-content a:hover {background-color: #ddd}
+ 
+ /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+ .show {display:block;} 
+ /*div holding the loading cirlce on uploading pictures and videos*/
+.iver{
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 1px white;
+  display: none;
+}
+
+.classTitle{
+  width: 100%;
+  text-align: left;
+  height: max-content;
+  margin-bottom: 0px;
+}
+.classTitle p{
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  margin: 0px;
+  margin: 5px;
+}
+.classTitle p:hover{
+  font-size: 20px;
+  color: grey;
+  cursor: pointer;
+}
+
+.classSubTitle{
+  display: none;
+  text-align: center;
+}
+#spin{
+  position: relative;
+  font-size: 30px;
+  margin: 0px;
+  color: white;
+}
+#spin2{
+  position: relative;
+  font-size: 30px;
+  margin: 0px;
+  color: black;
+}

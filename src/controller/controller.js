@@ -229,18 +229,47 @@
         $http.post("admin/resource2", {
             Name: "this route is for getting all the resources"
         })
-        .then((res)=>{
+            .then((res) => {
 
-            //variable to store the data received from the router
-            var data = res.data
+                //variable to store the data received from the router
+                var data = res.data
 
-            console.log(data)
+                for (var i = 0; i < data.logo[0].length; i++) {
 
-        })
+                    var logo = data.logo[0][i]
+                    var resource = data.resource[0][i]
+
+                    var type = logo.contentType.split("/")
+                    type = type[1];
+
+                    var url = '../logo2/' + logo._id + "." + type;
+
+
+                    console.log(url)
+
+                    if (logo.metadata.Name == resource.Name) {
+                        
+                        $("<div class = \"resource\">" +
+                        "<div class = \"profile\">" +
+                        "<div class = \"loggo\" style=\"background-image: url("+url+");\">" +
+                        "</div>" +
+                        "</div>" +
+                        "<div class = \"leftsection\">" +
+                        "<h1 class = \"name\">" + resource.Name + "</h1>" +
+                        "<a href = " + resource.Link + " target=\"_blank\" >Visit " + resource.Name + " here </a>" +
+                        "<p class = \"description\">" + resource.Description + "</p>" +
+                        "</div>" +
+                        "</div>").appendTo(".resources")
+
+                    }
+
+                }
+
+            })
 
     }
 
-    //home investor controller
+    //home controller
     app.controller('HomeController', HomeController);
 
     function HomeController($location, $scope, $window, $http, jwtHelper) {
@@ -2466,7 +2495,7 @@
             };
 
             //if missing school
-            if(!vm.startup.school){
+            if (!vm.startup.school) {
                 vm.error = "The school section is missing"
                 return;
             }
@@ -2737,7 +2766,7 @@
             };
 
             //if missing investor type
-            if(!vm.investor.type){
+            if (!vm.investor.type) {
                 vm.error = "The investor type section is empty"
                 return;
             }

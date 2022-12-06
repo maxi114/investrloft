@@ -58,8 +58,100 @@
 
         var vm = this
 
+        //industry
+        $("<p class = \"industryy\">click here to pick your industry</p>").appendTo(".dropbtn")
+
+
         var myFiles2 = [];
         var myFiles = [];
+
+        //when user clicks select for the industry drop down
+        $(".dropbtn").click(function () {
+
+            //show the loading circle
+            $(".spin12").show();
+
+
+
+            //fetch all the industries from the industry database
+            $http.get('/entrepreneur/industry')
+                .then(function (res) {
+
+                    //hide the loading circle
+                    $(".spin12").hide();
+
+                    // var to store file
+                    var file = [];
+
+                    //loop through the data
+                    for (var i = 0; i < res.data.length; i++) {
+
+                        //get the title name of the industry
+                        if (res.data[i].SubTitle.length > 0) {
+
+                            //loop thorugh the subtitles
+                            for (var s = 0; s < res.data[i].SubTitle.length; s++) {
+
+                                file.push(
+                                    "<p class = \"sub\">" + res.data[i].SubTitle[s] + "</p>"
+                                )
+
+                            }
+                        }
+
+                        file = file.join("")
+
+                        //get the name of the category
+                        $("<div class = \"classTitle class2\">" +
+                            "<p class = \"tit\">" + res.data[i].Title + "</p>" +
+                            "<div class = \"classSubTitle\">" +
+                            file +
+                            "</div>" +
+                            "</div>").appendTo("#myDropdown");
+
+                        file = [];
+                    }
+
+
+
+                    //var to trak the title
+                    var text;
+
+                    //when user clicks class on the category
+                    $(".tit").click(function () {
+
+                        //hide the previous subtitles
+                        $(".classSubTitle").hide();
+
+                        text = $(this)[0].innerHTML.toLowerCase();
+
+                        $(".industryy").remove();
+                        $("<p class = \"industryy\">" + text + "</p>").appendTo(".dropbtn")
+
+                        $($(this).parent("div")[0].children[1]).show()
+
+                    })
+
+                    //when user clicks the subtitle
+                    $(".sub").click(function () {
+
+                        //value of the sutitle
+                        var text2 = $(this)[0].innerHTML.toLocaleLowerCase();
+
+                        $(".industryy").remove();
+                        $("<p class = \"industryy\">" + text + ":" + text2 + "</p>").appendTo(".dropbtn")
+
+                        //hide the previous subtitles
+                        $(".classSubTitle").hide();
+
+                        //hide the drop down
+                        $("#myDropdown").hide();
+                    })
+
+                })
+
+
+        })
 
         //route to get all the resources from the databse
         $http.post("admin/resource2", {
@@ -83,7 +175,6 @@
                         //check to see if the logo matches the resource
                         if (logo[l].metadata.Name == resource[i].Name) {
 
-                            console.log(resource[i])
                             var type = logo[l].contentType.split("/")
                             type = type[1];
                             var url = '../logo2/' + logo[l]._id + "." + type;
@@ -91,7 +182,7 @@
                             $("<div class = \"resource\">" +
                                 "<div class = \"profile\">" +
                                 "<div class = \"loggo\">" +
-                                "<img class = \"hgo\" src=" + url + " > " + 
+                                "<img class = \"hgo\" src=" + url + " > " +
                                 "</div>" +
                                 "</div>" +
                                 "<div class = \"leftsection\">" +
@@ -202,6 +293,7 @@
             //get the resource desctiption
             var description = $(".description").val()
 
+
             //store if the resource is live or not
             var live;
 
@@ -249,6 +341,19 @@
                 live = false
             }
 
+            //var to store the industry
+            var industry;
+
+            //if statement to check if there is an industry
+            if ($(".industryy").html() !== "click here to pick your industry" || "") {
+                industry = $(".industryy").html()
+            }
+            else {
+
+                $(".error1").html("please enter the resources industry.")
+                return;
+
+            }
 
             //var to store the resource 
             var resourc = {
@@ -256,6 +361,7 @@
                 link: link,
                 live: live,
                 description: description,
+                industry: industry
             }
 
             //check if there is a logo uploaded
@@ -286,6 +392,8 @@
                 headers: { 'Content-Type': undefined },
             })
                 .then((res) => {
+
+                    console.log(res.data)
 
                     //if the data is succesfully saved
                     if (res.data == "resource is saved") {

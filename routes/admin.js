@@ -61,10 +61,6 @@ router.post("/resource2", ((req, res) => {
             //if there is data
             if (data.length > 0) {
 
-                
-
-
-
 
                 gfs.files.find({ 'metadata.type': "logo", }).toArray((err, file) => {
 
@@ -170,6 +166,40 @@ router.post("/resources", upload.any(), ((req, res) => {
 
         //if the resource does not exist save to the database
         else {
+
+            var ind = req.body.industry
+            ind = ind.toLowerCase();
+            ind = ind.split(":");
+
+            if (ind.length > 1) {
+                ind1 = ind[0]
+                ind2 = ind[1]
+            }
+            else {
+                ind1 = ind[0];
+                ind2 = "none"
+            }
+
+            //remove all space at the start of the string
+            while (ind1.charAt(0) == " ") {
+                ind1 = ind1.substring(1);
+            }
+
+            //remove all space at the end of the string
+            while (ind1.charAt(ind1.length - 1) == " ") {
+                ind1 = ind1.substring(0, ind1.length - 1);
+            }
+
+             //remove all space at the start of the string
+             while (ind2.charAt(0) == " ") {
+                ind2 = ind2.substring(1);
+            }
+
+            //remove all space at the end of the string
+            while (ind2.charAt(ind2.length - 1) == " ") {
+                ind2 = ind2.substring(0, ind2.length - 1);
+            }
+
             var resource = new Resource();
 
             //save the data to the databse
@@ -177,6 +207,8 @@ router.post("/resources", upload.any(), ((req, res) => {
             resource.Link = req.body.link
             resource.Description = req.body.description
             resource.Live = req.body.live
+            resource.TitleIndustry = ind1
+            resource.SubIndustry = ind2
 
             //save the databse
             resource.save(function (err, document) {
