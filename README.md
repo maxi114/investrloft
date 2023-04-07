@@ -7,7 +7,7 @@ InvestrLoft seeks to fill the void between student entrepreneurs and investors. 
 
 
 ## Installation
-To run the application, you will first need to clone it on your machine from github using the following command git clone -b master https://github.com/8000h/csc400.git 
+To run the application, you will first need to clone it on your machine from github using the following command git clone -b master https://github.com/maxi114/investrloft.git 
 
 During the development stages of investrloft we utilized a program called Docker. A platform for developing shipping and running applications. In order to run the application, you will first need to install docker on your computer. Use this link to install docker  https://www.docker.com . Once docker is installed, you may be prompted to install WSL 2 Linux kernel. Use the provided link from the pop up to install WSL 2.  
 
